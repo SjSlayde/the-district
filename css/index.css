@@ -9,6 +9,7 @@
     }
 
     body{
+        width: 100vw;
         background: rgb(245,126,126);
         background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
     }
@@ -46,12 +47,17 @@
     }
 
     #navbot{
-        width: 100vw;
+        margin-left: 41vw;
+        width: 18vw;
         background-color: #315F72;
     }
 
     @media screen and (max-width: 926px) 
 {
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
     .imagecat{
         width: 50vw;
     }
@@ -62,6 +68,10 @@
 
 @media screen and (max-width: 768px) 
 {
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
     .imagecat{
         width: 100vw;
     }
