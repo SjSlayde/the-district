@@ -1,5 +1,12 @@
 
-#parent {
+    body {
+    font-family: Arial, "Times New Roman", sans-serif;
+    width: 100vw;
+    background: rgb(245,126,126);
+    background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
+    }
+
+    #parent {
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);/*horizontal*/
@@ -8,13 +15,9 @@
     grid-row-gap: 0px;
     }
 
-    body{
-        width: 100vw;
-        background: rgb(245,126,126);
-        background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
-    }
     #banniere {
         grid-area: 2 / 1 / 3 / 6; }
+
     #recherche { grid-area: 2 / 3 / 3 / 4;
                 margin-top: 10vw; }
                 
@@ -48,8 +51,25 @@
 
     #navbot{
         margin-left: 41vw;
-        width: 18vw;
+        width: 19vw;
         background-color: #315F72;
+    }
+    button{ border: #315F72 1px solid;
+        color: #315F72;
+    }
+
+    .color-315F72 {
+        background-color:#315F72;
+    }
+
+    #img-top {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .textnav{
+        font-size: 30px;
+        font-family: cursive;
     }
 
     @media screen and (max-width: 926px) 
@@ -59,10 +79,10 @@
         width: 100vw;
     }
     .imagecat{
-        width: 50vw;
+        width: 45vw;
     }
     .imageplat{
-        width: 50vw;
+        width: 45vw;
     }
 }
 
