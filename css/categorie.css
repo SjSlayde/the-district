@@ -4,6 +4,10 @@ body {
     background: rgb(245,126,126);
     background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
     }
+    #insertbgimg {
+        background-image: url("fil rouge/img/ibg.jpg");
+        background-size: 100% ;
+    }
 
     #parent {
 
