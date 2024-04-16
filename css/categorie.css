@@ -1,5 +1,4 @@
-
-    body {
+body {
     font-family: Arial, "Times New Roman", sans-serif;
     width: 100vw;
     background: rgb(245,126,126);
@@ -21,23 +20,24 @@
     #recherche { grid-area: 2 / 3 / 3 / 4;
                 margin-top: 10vw; }
                 
-                .imagecat {
-                    margin-top: 1px;
-                    padding: 0;
-                    border-radius: 16%;
-                    border: 4px solid #315F72;
-                    width: 18vw;
-                    height: 25vh;
-                }
-            
-                .imageplat {
-                    margin-top: 1px;
-                    padding: 0;
-                    border-radius: 16%;
-                    border: 4px solid #315F72;
-                    width: 18vw;
-                    height: 15vh;
-                }
+    .imagecat {
+        margin-top: 1px;
+        padding: 0;
+        border-radius: 16%;
+        border: 4px solid #315F72;
+        width: 18vw;
+        height: 25vh;
+    }
+
+    .imageplat {
+        margin-top: 1px;
+        padding: 0;
+        border-radius: 16%;
+        border: 4px solid #315F72;
+        width: 18vw;
+        height: 15vh;
+    }
+
     #video {
         width: 100%;
         object-fit: fill;
@@ -49,10 +49,10 @@
     }
 
     #navbot{
+        margin-left: 41vw;
         width: 19vw;
         background-color: #315F72;
     }
-    
     button{ border: #315F72 1px solid;
         color: #315F72;
     }
@@ -61,25 +61,18 @@
         background-color:#315F72;
     }
 
+    #img-top {
+        width: 100vw;
+        height: 40vh;
+    }
 
     .textnav{
         font-size: 30px;
         font-family: cursive;
     }
-
-    img {
-    transition: 1s ease;
-    }
-    
-    img:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 1s ease;
-    }
     
     @media screen and (max-width: 926px) 
-    {
+{
     #navbot{
         margin-left: 0vw;
         width: 100vw;
@@ -90,11 +83,12 @@
     .imageplat{
         width: 45vw;
     }
-    }   
+}
 
-    @media screen and (max-width: 768px) 
-    {
+@media screen and (max-width: 768px) 
+{
     #navbot{
+        margin-left: 0vw;
         width: 100vw;
     }
     .imagecat{
@@ -103,4 +97,4 @@
     .imageplat{
         width: 100vw;
     }
-    }
+}

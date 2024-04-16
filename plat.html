@@ -6,7 +6,7 @@
     <title>The District</title>
     <link rel="shortcut icon" type="image/png" href="img/the_district_brand/favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/plat.css"/>
   </head>
   <body>
     <header id="navbar">
@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse justify-content-center col-8" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item px-5">
-              <a class="textnav nav-link active" href="#" title="Accueil">Accueil</a>
+                <a class="textnav nav-link" href="index.html" title="Accueil">Accueil</a>
             </li>
             <li class="nav-item px-5">
-              <a class="textnav nav-link" href="#" title="Categorie">Categorie</a>
+                <a class="textnav nav-link" href="categorie.html" title="Categorie">Categorie</a>
             </li>
             <li class="nav-item px-5">
-              <a class="textnav nav-link" href="#" title="Plat">Plat</a>
+                <a class="textnav nav-link active" href="plat.html" title="Plat">Plat</a>
             </li>
             <li class="nav-item px-5">
               <a class="textnav nav-link" href="#" title="contact">contact</a>
@@ -38,67 +38,193 @@
     </nav>
     <img id="img-top" src="img/bg2.jpeg" alt="bg2">
     </header>
-    <div id="pageveggie">
-        <div class="container">
+        <div id="pageveggie" class="container">
             <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/cesar_salad.jpg" alt="platsalade1">
-                <img class="imagecat img-fluid col-3" style="background-color: white;" src="img/food/salad1.png" alt="platsalade2">
-            </div>
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-8298.jpg" alt="platpizzalegume">
-                <img class="imagecat img-fluid col-3" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
-            </div>
-        </div>
-    </div>
-    <div id="pagehamburger">
-        <div class="container">
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/cheesburger.jpg" alt="platcheesburger">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-433.jpeg" alt="platcheesburgermcdo">
-            </div>
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/hamburger.jpg" alt="plathamburger1">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-6340.jpg" alt="plathamburger2">
-            </div>
-        </div>
-    </div>
-    <div id="pagepizza">
-        <div class="container">
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/pizza-margherita.jpg" alt="platmargherita">
-                <img class="imagecat img-fluid col-3" src="img/food/pizza-salmon.png" alt="platsalmon">
-            </div>
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-8298.jpg" alt="platpizzaveggie">
-            </div>
-        </div>
-    </div>
-    <div id="pagewrap">
-        <div class="container">
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-3461.jpg" alt="platwrap2">
-                <img class="imagecat img-fluid col-3" src="img/food/buffalo-chicken.webp" alt="platwrap1">
-            </div>
-            <div class="row justify-content-between mt-3">
-                <img class="imagecat img-fluid col-3" src="img/food/Food-Name-3631.jpg" alt="platsandwich">
-            </div>
-        </div>
-    </div>
-        <div id="pagepate">
-            <div class="container">
-                <div class="row justify-content-between mt-3">
-                    <img class="imagecat img-fluid col-3" src="img/food/tagliatelles-saumon.webp" alt="platspasaumon">
-                    <img class="imagecat img-fluid col-3" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/cesar_salad.jpg" alt="platsalade1">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">la salade du chef</h3><p class="card-text">c'est la salade du chef quoi</p>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="row justify-content-between mt-3">
-                    <img class="imagecat img-fluid col-3" src="img/food/lasagnes_viande.jpg" alt="platlasagne">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6"  src="img/food/salad1.png" alt="platsalade2">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">la salade du chef v2</h3><h5 class="card-text">c'est la salade du chef v2 quoi</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-8298.jpg" alt="platpizzalegume">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pizza epinard</h3><h5 class="card-text">une abomination</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pate veggie</h3><h5 class="card-text">des pâte bolognaise sans viande</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="pagehamburger" class="container">
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/cheesburger.jpg" alt="platcheesburger">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">le vraie burger</h3><h5 class="card-text">un cheesburger fait avec amour</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-433.jpeg" alt="platcheesburgermcdo">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">le faux burger</h3><h5 class="card-text">un cheesburger fait avec un peu moins d'amour</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/hamburger.jpg" alt="plathamburger1">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">le burger roquette</h3><h5 class="card-text">de quoi decoller sur la lune</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-6340.jpg" alt="plathamburger2">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">hamburger avec un bison entier</h3><h5 class="card-text">un burger de canibale</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pagepizza" class="container">
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/pizza-margherita.jpg" alt="platmargherita">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pizza margherita</h3><h5 class="card-text">la pizza classique absolue</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/pizza-salmon.png" alt="platsalmon">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pizza saumon</h3><h5 class="card-text">pizza qui sera vous etonnées</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-8298.jpg" alt="platpizzaveggie">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pizza epinard</h3><h5 class="card-text">une abomination</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pagewrap" class="container">
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-3461.jpg" alt="platwrap2">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">wrap poulet brochée</h3><h5 class="card-text">un petit en-cas parfait</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/buffalo-chicken.webp" alt="platwrap1">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">wrap poulet effilochée</h3><h5 class="card-text">un petit en-cas vraiment parfait</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between mt-3">
+                <div class="block_text-img col-5">
+                    <div class="row card">
+                        <img class="card-img-top imagecat img-fluid col-6" src="img/food/Food-Name-3631.jpg" alt="platsandwich">
+                        <div class="col-4 card-body">
+                            <h3 class="card-title">pain au fromage</h3><h5 class="card-text">un petit en-cas un peu moins parfait</h5>
+                            <a href="#" class="btn btn-primary">Commander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="pagepate" class="container">
+                <div class="row justify-content-between mt-3">
+                    <div class="block_text-img col-5">
+                        <div class="row card">
+                            <img class="card-img-top imagecat img-fluid col-6" src="img/food/tagliatelles-saumon.webp" alt="platspasaumon">
+                            <div class="col-4 card-body">
+                                <h3 class="card-title">pate a la créme et saumon</h3><h5 class="card-text">franchement le saumon est le pire poisson en terme de gout</h5>
+                                <a href="#" class="btn btn-primary">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block_text-img col-5">
+                        <div class="row card">
+                            <img class="card-img-top imagecat img-fluid col-6" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
+                            <div class="col-4 card-body">
+                                <h3 class="card-title">pate veggie</h3><h5 class="card-text">des pâte bolognaise sans viande</h5>
+                                <a href="#" class="btn btn-primary">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between mt-3">
+                    <div class="block_text-img col-5">
+                        <div class="row card">
+                            <img class="card-img-top imagecat img-fluid col-6" src="img/food/lasagnes_viande.jpg" alt="platlasagne">
+                            <div class="col-4 card-body">
+                                <h3 class="card-title">lasagne</h3><h5 class="card-text">le plat des dieux</h5>
+                                <a href="#" class="btn btn-primary">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     <div id="boutonarmy" class="container">
     <div class="row justify-content-between mt-3">
-        <button class="btn btn-succes color-315F72 rounded-pill col-3" type="button" id="precedent">precedent</button>
-        <button class="btn btn-succes color-315F72 rounded-pill col-3" type="button"  id="suivant"> suivant</button>
+        <button class="btn btn-succes color-315F72 rounded-pill col-2" type="button" id="precedent">precedent</button>
+        <button class="btn btn-succes color-315F72 rounded-pill col-2" type="button"  id="suivant"> suivant</button>
     </div>
     </div>
     <footer>
