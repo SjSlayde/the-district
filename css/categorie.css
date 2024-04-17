@@ -75,6 +75,11 @@ body {
         font-family: cursive;
     }
     
+    #insertbgimg{
+        background-image: url("../img/ibg.jpg");
+        border: #315F72 1px solid;
+    }
+
     @media screen and (max-width: 926px) 
 {
     #navbot{

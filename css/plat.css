@@ -86,6 +86,10 @@ body {
     .imageplat{
         width: 45vw;
     }
+    .card {
+        height: auto;
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 768px) 
@@ -99,5 +103,9 @@ body {
     }
     .imageplat{
         width: 100vw;
+    }
+    .card {
+        height: auto;
+        width: auto;
     }
 }

@@ -31,3 +31,8 @@ else if(page==2) {
     document.getElementById('page2').style.display= 'block'
  }
 }
+
+function categoriered (page){
+    window.location.href="../plat.html"
+pages(page)
+}
