@@ -25,8 +25,25 @@ function redirection (cat){
     }
 }
 
-function commande(plat){
-    var platcommande = document.getElementById(plat)
-    window.location.href="commande.html"
-    document.getElementById('insertcommande').value += platcommande;
+// function commande(plat){
+//     var platcommande = document.getElementById(plat)
+//     window.location.href="commande.html"
+//     document.getElementById('insertcommande').value += platcommande;
+// }
+document.getElementById('insertbgimg').style.display="none"
+function commande(N) {
+    const card = document.getElementsByClassName('block_text-img')
+    for(var i=0;i<card.length;i++)
+{
+    card[i].style.display='none';
+}
+    const balisea = document.getElementsByClassName('btn-primary')
+    for(var i=0;i<balisea.length;i++)
+{
+    balisea[i].style.display='none';
+}
+    // document.getElementById('img-top').style.display="none"
+    document.getElementById('boutonarmy').style.display="none"
+    document.getElementById('insertbgimg').style.display="block"
+    document.getElementById('insertcommande').innerHTML = document.getElementById('plat'+N).innerHTML
 }
