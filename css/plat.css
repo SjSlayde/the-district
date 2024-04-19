@@ -29,7 +29,7 @@ body {
     .card {
         background-color: #315F72;
         border: 4px solid #315F72;
-        height: 21vh;
+        height: 25vh;
         width: 35vw;
     }
 
@@ -73,7 +73,18 @@ body {
         font-size: 30px;
         font-family: cursive;
     }
+
+    #insertbgimg{
+        background-image: url("../img/fosyyyy.jpg");
+        background-size: 100vw;
+        background-position-y: center;
+        border: #315F72 1px solid;
+    }
     
+    .labelt{
+        color: white;
+    }
+
     @media screen and (max-width: 926px) 
 {
     #navbot{

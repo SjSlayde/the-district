@@ -30,20 +30,37 @@ function redirection (cat){
 //     window.location.href="commande.html"
 //     document.getElementById('insertcommande').value += platcommande;
 // }
-document.getElementById('insertbgimg').style.display="none"
-function commande(N) {
-    const card = document.getElementsByClassName('block_text-img')
-    for(var i=0;i<card.length;i++)
-{
-    card[i].style.display='none';
+if(document.getElementById('insertbgimg')!=null){
+    document.getElementById('insertbgimg').style.display="none"
+    function commande(N) {
+        const card = document.getElementsByClassName('block_text-img')
+        for(var i=0;i<card.length;i++)
+        {
+            card[i].style.display='none';
+        }
+        const balisea = document.getElementsByClassName('btn-primary')
+        for(var i=0;i<balisea.length;i++)
+        {
+            balisea[i].style.display='none';
+        }
+        const insertquantite = document.getElementsByClassName('insertquantité')
+        const ChoixQuantité = document.getElementById("ChoixQuantité").innerHTML
+        document.getElementById("ChoixQuantité").style.display="none"
+        insertquantite[N-1].innerHTML= ChoixQuantité
+        // document.getElementById('img-top').style.display="none"
+        document.getElementById('boutonarmy').style.display="none"
+        document.getElementById('insertbgimg').style.display="block"
+        document.getElementById('insertcommande').innerHTML += document.getElementById('plat'+N).innerHTML
+    }
 }
-    const balisea = document.getElementsByClassName('btn-primary')
-    for(var i=0;i<balisea.length;i++)
-{
-    balisea[i].style.display='none';
-}
-    // document.getElementById('img-top').style.display="none"
-    document.getElementById('boutonarmy').style.display="none"
-    document.getElementById('insertbgimg').style.display="block"
-    document.getElementById('insertcommande').innerHTML = document.getElementById('plat'+N).innerHTML
-}
+    
+{/* <div class="col-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
+<select class="form-select " aria-label="Default select example">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select></div> */}
