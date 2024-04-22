@@ -40,12 +40,12 @@
     </header>
         <div id="pageveggie" class="container">
             <div id="salade1" class="row justify-content-between">
-                <div id="plat1" class="block_text-img col-12 col-xl-5 mt-3">
+                <div id="plat1" class="shadow block_text-img col-12 col-xl-5 mt-3">
                     <div class="row card">
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/cesar_salad.jpg" alt="platsalade1">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">la salade du chef</h4><p class="card-text">c'est la salade du chef quoi</p>
-                            <a href="#" class="btn btn-primary A" onclick="commande(1)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary A" onclick="commande(0)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6"  src="img/food/salad1.png" alt="platsalade2">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">la salade du chef v2</h4><p class="card-text">c'est la salade du chef v2 quoi</p>
-                            <a href="#" class="btn btn-primary A" onclick="commande(2)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary A" onclick="commande(1)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-8298.jpg" alt="platpizzalegume">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pizza epinard</h4><p class="card-text">une abomination</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(3)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(2)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pate veggie</h4><p class="card-text">des pâte bolognaise sans viande</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(4)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(3)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/cheesburger.jpg" alt="platcheesburger">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">le vraie burger</h4><p class="card-text">un cheesburger fait avec amour</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(5)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(4)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -96,18 +96,18 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-433.jpeg" alt="platcheesburgermcdo">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">le faux burger</h4><p class="card-text">un cheesburger fait avec un peu moins d'amour</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(6)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(5)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-between">
+            <div id="checkplathtml" class="row justify-content-between">
                 <div id="plat7"  class="block_text-img col-12 col-xl-5 mt-3">
                     <div class="row card">
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/hamburger.jpg" alt="plathamburger1">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">le burger roquette</h4><p class="card-text">de quoi decoller sur la lune</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(7)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(6)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-6340.jpg" alt="plathamburger2">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">hamburger avec un bison entier</h4><p class="card-text">un burger de canibale</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(8)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(7)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/pizza-margherita.jpg" alt="platmargherita">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pizza margherita</h4><p class="card-text">la pizza classique absolue</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(9)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(8)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/pizza-salmon.png" alt="platsalmon">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pizza saumon</h4><p class="card-text">pizza qui sera vous etonnées</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(10)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(9)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-8298.jpg" alt="platpizzaveggie">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pizza epinard</h4><p class="card-text">une abomination</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(11)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(10)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-3461.jpg" alt="platwrap2">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">wrap poulet brochée</h4><p class="card-text">un petit en-cas parfait</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(12)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(11)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/buffalo-chicken.webp" alt="platwrap1">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">wrap poulet effilochée</h4><p class="card-text">un petit en-cas vraiment parfait</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(13)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(12)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
                         <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/Food-Name-3631.jpg" alt="platsandwich">
                         <div class="col-xl-4 card-body">
                             <h4 class="card-title">pain au fromage</h4><p class="card-text">un petit en-cas un peu moins parfait</p>
-                            <a href="#" class="btn btn-primary" class="A" onclick="commande(14)">Commander</a><span class="insertquantité"></span>
+                            <a href="#" class="btn btn-primary" onclick="commande(13)">Commander</a><span class="insertquantité"></span>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                             <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/tagliatelles-saumon.webp" alt="platspasaumon">
                             <div class="col-xl-4 card-body">
                                 <h4 class="card-title">pate a la créme et saumon</h4><p class="card-text">franchement le saumon est le pire poisson</p>
-                                <a href="#" class="btn btn-primary" class="A" onclick="commande(15)">Commander</a><span class="insertquantité"></span>
+                                <a href="#" class="btn btn-primary" onclick="commande(14)">Commander</a><span class="insertquantité"></span>
                             </div>
                         </div>
                     </div>
@@ -204,7 +204,7 @@
                             <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/spaghetti-legumes.jpg" alt="platspalegume">
                             <div class="col-xl-4 card-body">
                                 <h4 class="card-title">pate veggie</h4><p class="card-text">des pâte bolognaise sans viande</p>
-                                <a href="#" class="btn btn-primary" class="A" onclick="commande(16)">Commander</a><span class="insertquantité"></span>
+                                <a href="#" class="btn btn-primary" onclick="commande(15)">Commander</a><span class="insertquantité"></span>
                             </div>
                         </div>
                     </div>
@@ -215,16 +215,29 @@
                             <img class="card-img-top imagecat img-fluid col-xl-6" src="img/food/lasagnes_viande.jpg" alt="platlasagne">
                             <div class="col-xl-4 card-body">
                                 <h4 class="card-title">lasagne</h4><p class="card-text">le plat des dieux</p>
-                                <a href="#" class="btn btn-primary" class="A" onclick="commande(17)">Commander</a><span class="insertquantité"></span>
+                                <a href="#" class="btn btn-primary" onclick="commande(16)">Commander</a><span class="insertquantité"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pageasian" class="container">
+                <div class="row justify-content-between">
+                    <div class="block_text-img col-12 col-xl-5 mt-3">
+                        <div class="row card">
+                            <img class="card-img-top imagecat img-fluid col-xl-6" src="../img/category/asian_food_cat.jpg" alt="platsushie">
+                            <div class="col-xl-4 card-body">
+                                <h4 class="card-title">sushie</h4><p class="card-text">apparament le seul plat asiatique</p>
+                                <a href="#" class="btn btn-primary" onclick="commande(17)">Commander</a><span class="insertquantité"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
     <div id="boutonarmy" class="container">
-    <div class="row justify-content-between mt-3">
-        <button class="btn btn-succes color-315F72 rounded-pill col-xl-2 col-4" type="button" id="precedent">precedent</button>
-        <button class="btn btn-succes color-315F72 rounded-pill col-xl-2 col-4" type="button"  id="suivant"> suivant</button>
+    <div id="yop" class="row justify-content-between mt-3">
+        <button class=" btn rounded-pill col-md-2 col-4" type="button" id="precedent">precedent</button>
+        <button class=" btn rounded-pill col-md-2 col-4" type="button"  id="suivant"> suivant</button>
     </div>
     </div>
     <div id="insertbgimg">
@@ -248,7 +261,7 @@
                         </div>
                         <div class="col-xl-6 col-12 mb-3">
                             <label for="Email" class="labelt col-3 form-label">Email*:</label>
-                            <input type="email" name="Email" class="form-control" id="Email">
+                            <input type="text" name="Email" class="form-control" id="Email">
                         </div>
                         <div class="col-xl-6 col-12 mb-3">
                             <label for="tel" class="labelt col-3 form-label">Téléphone*:</label>
@@ -297,6 +310,7 @@
         </div>
       </nav>
     </footer>
+    <script src="js/filtre.js"></script>
     <script src="js/test.js"></script>
     <script src="js/carouselplat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

@@ -31,11 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
                             var pasta = document.getElementById('pagepate')
                             var wrap = document.getElementById('pagewrap')
                             var pizza = document.getElementById('pagepizza')
+                            var asianfood = document.getElementById('pageasian')
                             var page = 1 
+                            if(document.getElementById("checkplathtml")!=null){
                             hamburger.style.display= 'none'
                             pasta.style.display= 'none'
                             wrap.style.display= 'none'
                             pizza.style.display= 'none'
+                            asianfood.style.display='none'}
                             
                             suivant.addEventListener('click',function suivant(){
                                 page++
@@ -96,3 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 }}
                 // }
             });
+            
+            if(document.getElementById('insertbgimg')!=null){
+                document.getElementById('insertbgimg').style.display="none"}
+                function commande(N) {
+                    const card = document.getElementsByClassName('block_text-img')
+                    for(var i=0;i<card.length;i++)
+                    {
+                        card[i].style.display='none';
+                    }
+                    const balisea = document.getElementsByClassName('btn-primary')
+                    for(var i=0;i<balisea.length;i++)
+                    {
+                        balisea[i].style.display='none';
+                    }
+                    const insertquantite = document.getElementsByClassName('insertquantité')
+                    const ChoixQuantité = document.getElementById("ChoixQuantité").innerHTML
+                    document.getElementById("ChoixQuantité").style.display="none"
+                    insertquantite[N].innerHTML= ChoixQuantité
+                    // document.getElementById('img-top').style.display="none"
+                    if(document.getElementById('boutonarmy')!=null){
+                    document.getElementById('boutonarmy').style.display="none"}
+                    document.getElementById('insertbgimg').style.display="block"
+                    document.getElementById('insertcommande').innerHTML += card[N].innerHTML
+                }
