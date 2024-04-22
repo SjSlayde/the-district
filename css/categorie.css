@@ -27,7 +27,7 @@ body {
     .imagecat {
         margin-top: 1px;
         padding: 0;
-        border-radius: 16%;
+        border-radius: 40%;
         border: 4px solid #315F72;
         width: 18vw;
         height: 25vh;
@@ -79,6 +79,27 @@ body {
         background-image: url("../img/ibg.jpg");
         border: #315F72 1px solid;
     }
+
+    .btn{
+        filter:drop-shadow( 0 0 0.25rem black);
+        transition: all 0.25s;
+    } .btn:hover{
+        transform: scale(1.10);
+    }
+
+
+        button.btn {
+        background-color: #315F72;
+        transition: all 0.25s;
+    }   button.btn:hover{
+        background-color: #315F72;
+        transform: scale(1.10);
+    }
+
+    .card { width: auto;
+        background-color: rgba(240,173,158,1);
+        filter:drop-shadow( 0 0 0.25rem black) }
+    .card-header, .card-footer { opacity: 1}
 
     @media screen and (max-width: 926px) 
 {

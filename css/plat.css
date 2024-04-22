@@ -29,8 +29,10 @@ body {
     .card {
         background-color: #315F72;
         border: 4px solid #315F72;
-        height: 25vh;
+        max-height: 25vh;
         width: 35vw;
+        filter:drop-shadow( 0 0 0.25rem black)
+
     }
 
     .imageplat {
@@ -39,6 +41,7 @@ body {
         border: 4px solid #315F72;
         width: 18vw;
         height: 15vh;
+        filter:drop-shadow( 0 0 0.25rem black)
     }
 
     #video {
@@ -56,11 +59,24 @@ body {
         width: 19vw;
         background-color: #315F72;
     }
-    button{ border: #315F72 1px solid;
-        color: #315F72;
+    
+    .btn{
+        filter:drop-shadow( 0 0 0.25rem black);
+        transition: all 0.25s;
+    } .btn:hover{
+        transform: scale(1.10);
     }
 
-    .color-315F72 {
+
+        button.btn {
+        background-color: #315F72;
+        transition: all 0.25s;
+    }   button.btn:hover{
+        background-color: #315F72;
+        transform: scale(1.10);
+    }
+
+    .color-315F72{
         background-color:#315F72;
     }
 
@@ -68,21 +84,35 @@ body {
         width: 100vw;
         height: 40vh;
     }
-
+    
     .textnav{
         font-size: 30px;
         font-family: cursive;
     }
-
+    
     #insertbgimg{
         background-image: url("../img/fosyyyy.jpg");
         background-size: 100vw;
         background-position-y: center;
         border: #315F72 1px solid;
+        filter:drop-shadow( 0 0 0.25rem black)
     }
     
     .labelt{
         color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+    .card-img-top{
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+
+    .card-title{
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+    p{
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
     }
 
     @media screen and (max-width: 926px) 
