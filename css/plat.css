@@ -29,30 +29,24 @@ body {
     .card {
         background-color: #315F72;
         border: 4px solid #315F72;
-        max-height: 25vh;
+        height: 21vh;
         width: 35vw;
         filter:drop-shadow( 0 0 0.25rem black)
-
     }
 
-    .imageplat {
-        padding: 0;
-        border-radius: 16%;
-        border: 4px solid #315F72;
-        width: 18vw;
-        height: 15vh;
+    .card-img-top {
         filter:drop-shadow( 0 0 0.25rem black)
     }
 
-    #video {
-        width: 100%;
-        object-fit: fill;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
+    .card-title {
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
     }
+    
+    .card-body .btn {
+        float: right;
+    }
+
 
     #navbot{
         margin-left: 41vw;
@@ -70,13 +64,11 @@ body {
 
         button.btn {
         background-color: #315F72;
-        transition: all 0.25s;
     }   button.btn:hover{
         background-color: #315F72;
-        transform: scale(1.10);
     }
 
-    .color-315F72{
+    .color-315F72 {
         background-color:#315F72;
     }
 
@@ -85,12 +77,12 @@ body {
         height: 40vh;
     }
     
-    .textnav{
+    .textnav {
         font-size: 30px;
         font-family: cursive;
     }
     
-    #insertbgimg{
+    #insertbgimg {
         background-image: url("../img/fosyyyy.jpg");
         background-size: 100vw;
         background-position-y: center;
@@ -98,22 +90,16 @@ body {
         filter:drop-shadow( 0 0 0.25rem black)
     }
     
-    .labelt{
+    .labelt {
         color: white;
-        filter:drop-shadow( 0 0 0.25rem black)
-    }
-    .card-img-top{
         filter:drop-shadow( 0 0 0.25rem black)
     }
 
-    .card-title{
+    p {
         color: white;
         filter:drop-shadow( 0 0 0.25rem black)
     }
-    p{
-        color: white;
-        filter:drop-shadow( 0 0 0.25rem black)
-    }
+    
 
     @media screen and (max-width: 926px) 
 {
@@ -122,9 +108,6 @@ body {
         width: 100vw;
     }
     .imagecat{
-        width: 45vw;
-    }
-    .imageplat{
         width: 45vw;
     }
     .card {
@@ -140,9 +123,6 @@ body {
         width: 100vw;
     }
     .imagecat{
-        width: 100vw;
-    }
-    .imageplat{
         width: 100vw;
     }
     .card {

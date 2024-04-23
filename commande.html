@@ -45,41 +45,55 @@
     </nav>
 
     <!-- NAVBAR END -->
+    <!-- image top -->
 
     <img id="img-top" src="img/bg3.jpeg" alt="bg3">
 
     </header>
 
+    <!--contenue centrale start-->
+
     <div id="insertbgimg">
-        <div id="insertcommande"></div>
-        <form id="form">
-            <div class="container mt-3">
-                <div class="row mb-3">
-                    <div class="col-12 mb-3">
-                        <label for="Nom" class="col-3 form-label">Nom et Prénom*:</label>
+        <form id="form" class="container mt-3">
+                <div class="row m-3">
+                    <div id="insertcommande" class="d-flex justify-content-center">
+                    </div>
+                    <div class="col-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
+                        <select class="form-select" id="quantite" aria-label="Default select example">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select></div>
+                    <div class=" mt-3 col-12 mb-3">
+                        <label for="Nom" class="labelt col-3 form-label">Nom et Prénom*:</label>
                         <input type="text" name="nom" class="form-control" id="Nom" >
                     </div>
-                    <div class="col-6 mb-3">
-                        <label for="Email" class="col-3 form-label">Email*:</label>
+                    <div class="col-md-6 col-12 mb-3">
+                        <label for="Email" class="labelt col-3 form-label">Email*:</label>
                         <input type="text" name="Email" class="form-control" id="Email">
                     </div>
-                    <div class="col-6 mb-3">
-                        <label for="tel" class="col-3 form-label">Téléphone*:</label>
+                    <div class="col-md-6 col-12 mb-3">
+                        <label for="Tel" class="labelt col-3 form-label">Téléphone*:</label>
                         <input type="text" name="tel" class="form-control" id="Tel">
                     </div>
                     <div class="col-12 mb-3">
-                        <label for="demande" class="col-3 form-label">Votre Demande*:</label>
-                        <textarea cols="500" rows="4" name="demande" class="form-control" id="Demande"></textarea>
+                        <label for="Adresse" class="labelt col-3 form-label">Votre adresse*:</label>
+                        <textarea cols="500" rows="4" name="demande" class="form-control" id="Adresse"></textarea>
                     </div>
                     <div class="row justify-content-between mt-3">
-                        <button class="btn btn-succes color-315F72 rounded-pill col-1" type="reset" id="precedent">Annuler</button>
-                        <button class="btn btn-succes color-315F72 rounded-pill col-1" type="submit" id="suivant">Envoyer</button>
+                        <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="reset" id="Cancel">Annuler</button>
+                        <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="submit" id="Envoyer">Envoyer</button>
                     </div>
                 </div>
-            </div>
         </form>
     </div>
 
+    <!--contenue centrale end-->
+    <!--footer start-->
         <footer>
             <nav id="navbot" class="navbar navbar-expand bg-dark navbar-dark mt-3 rounded-pill rounded-xs-none container-fluid">
                 <div class="collapse navbar-collapse justify-content-center row" id="collapsibleNavbar2">
@@ -103,6 +117,8 @@
             </div>
         </nav>
     </footer>
+    <!--footer end-->
+    <!--script java et bootstrap-->
 
     <script src="js/test.js"></script>
     <script src="js/filtre.js"></script>

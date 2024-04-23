@@ -31,16 +31,13 @@ body {
         border: 4px solid #315F72;
         width: 18vw;
         height: 25vh;
-    }
-
-    .imageplat {
-        margin-top: 1px;
-        padding: 0;
-        border-radius: 16%;
-        border: 4px solid #315F72;
-        width: 18vw;
-        height: 15vh;
-    }
+        transition: 1s ease;
+    } .imagecat:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+        }
 
     #video {
         width: 100%;

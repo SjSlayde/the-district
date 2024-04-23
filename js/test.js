@@ -1,4 +1,4 @@
-function redirection (cat){
+function redirection (cat){//ne sert plus mais permet de faire des redirection avec onclick
     if(cat==1){
         window.location.href="category/asianfood.html"
     }
