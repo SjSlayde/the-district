@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             pasta.style.display= 'none'
                             wrap.style.display= 'none'
                             pizza.style.display= 'none'
-                            asianfood.style.display='none'}//definie et desactive tout les cellule sauf la premiere
+                            asianfood.style.display='none'}//definie et desactive tout les cellule sauf la premiere si checkplat existe
                             
                             suivant.addEventListener('click',function suivant(){
                                 page++
