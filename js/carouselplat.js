@@ -70,8 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('insertbgimg').style.display="none"}
             function commande(N) { //fait apparaitre le formulaire quand l'utilisateur clique sur commander 
                     
+                if(document.getElementById("Titre")!=null){
                     document.getElementById("Titre").style.display="none" //fait disparaitre le titre h1
-                    const card = document.getElementsByClassName('block_text-img') // mets dans un tableau toute mes div plat/card
+                }
+                    const card = document.getElementsByClassName('card') // mets dans un tableau toute mes div plat/card
                     
                     for(var i=0;i<card.length;i++)// fait disparaitre toute les cards
                     {

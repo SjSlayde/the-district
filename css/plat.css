@@ -29,8 +29,7 @@ body {
     .card {
         background-color: #315F72;
         border: 4px solid #315F72;
-        height: 21vh;
-        width: 35vw;
+        height: 30vh;
         filter:drop-shadow( 0 0 0.25rem black)
     }
 

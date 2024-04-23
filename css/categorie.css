@@ -94,9 +94,11 @@ body {
     }
 
     .card { width: auto;
-        background-color: rgba(240,173,158,1);
+        background-color: rgba(240,173,158,0.1);
         filter:drop-shadow( 0 0 0.25rem black) }
-    .card-header, .card-footer { opacity: 1}
+    .card-title{
+        color: white;
+    }
 
     @media screen and (max-width: 926px) 
 {
