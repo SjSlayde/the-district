@@ -20,7 +20,7 @@
 
     #recherche { grid-area: 2 / 3 / 3 / 4;
                 margin-top: 10vw; }
-                
+               
                 .imagecat {
                     margin-top: 5px;
                     padding: 0;
@@ -91,6 +91,38 @@
         color: white;
     }
     
+    .gridmid {
+        display: grid;
+        grid-template-columns: 0.7fr repeat(3, 1fr) 0.7fr;
+        grid-template-rows: repeat(4, 1fr) 0.4fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        }
+        
+        .mid1 { grid-area: 1 / 1 / 6 / 2; }
+        .mid2 { grid-area: 1 / 2 / 5 / 5; }
+        .mid3 { grid-area: 1 / 5 / 6 / 6; }
+        .mid4 { grid-area: 5 / 2 / 6 / 5; }
+        
+        
+
+    .parallax {
+
+        
+        background-image : url("../img/video/Spoon_cLe_Bonbon-1-scaled.jpg");
+        
+        min-height : 500px;
+        
+        background-attachment : fixed;
+        
+        background-position : center;
+        
+        background-repeat : no-repeat;
+        
+        background-size : cover;
+        
+        }
+
     @media screen and (max-width: 926px) 
     {
     #navbot{

@@ -99,6 +99,9 @@ body {
         filter:drop-shadow( 0 0 0.25rem black)
     }
     
+    .row button{
+        color: white;
+    }
 
     @media screen and (max-width: 926px) 
 {

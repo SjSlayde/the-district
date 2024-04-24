@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             
                             suivant.addEventListener('click',function suivant(){
                                 page++
-                                if (page > 5) {
+                                if (page > 6) {
                                     page = 1
                                 }
                                 pages(page)
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         precedent.addEventListener('click',function precedent(){
                             page--
                             if ( page < 1) {
-                                page = 5
+                                page = 6
                             }
                             pages(page)
                         })//fait tourner le carousel avec Precedent
@@ -38,32 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
                         
                         function pages(page){ //fonctionne pour afficher la page en fonction du compteur
   
+                            veggie.style.display= 'none'
+                            hamburger.style.display= 'none'
+                            pasta.style.display= 'none'
+                            wrap.style.display= 'none'
+                            pizza.style.display= 'none'
+                            asianfood.style.display='none'
+
                 if (page==1) {
                     veggie.style.display= 'block'
-                    hamburger.style.display= 'none'
-                    pizza.style.display='none'
                 }
                 if (page==2) {
-                    veggie.style.display= 'none'
                     hamburger.style.display= 'block'
-                    pasta.style.display= 'none'
                 }
                 if (page==3) {
-                    hamburger.style.display= 'none'
                     pasta.style.display= 'block'
-                    wrap.style.display= 'none'
                 }
                 if (page==4) {
-                    pasta.style.display='none'
                     wrap.style.display='block'
-                    pizza.style.display='none'
                 }
                 if (page==5) {
-                    veggie.style.display= 'none'
-                    wrap.style.display='none'
                     pizza.style.display='block'
+                }
+                if (page==6) {
+                    asianfood.style.display='block'
                 }}
-                // }
             });
             
             if(document.getElementById('insertbgimg')!=null){ //regade si insert insertbgimg existe et la fait diparaitre pour la faire faire apparaitre plus tard
