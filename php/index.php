@@ -13,8 +13,10 @@
 <body>
 
     <!-- NAVBAR START -->
-
-    <header id="navbar">
+    <?php $myfile = fopen("header.php", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("header.php"));
+fclose($myfile);?>
+    <!-- <header id="navbar">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" href="#"><img src="img/the_district_brand/logo_transparent.png" width="50" class="d-inline-block align-text-top" alt="navicon"></a>
             
@@ -39,13 +41,13 @@
                 </li>
             </ul>
         </div>
-     </nav>
+     </nav> -->
     
      <!-- NAVBAR END -->
 
      <!-- VIDEO START -->
 
-        <div id="parent">
+        <!-- <div id="parent">
             <div id="banniere" class="row g-0">
                 <video id="video" class="col-12" src="img/video/video_the_district.webm" style="width: 100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
             </div>
@@ -55,7 +57,7 @@
                 </form>
             </div>
         </div>
-</header>
+</header>  -->
 
     <!-- VIDEO END -->
    
@@ -158,10 +160,12 @@
                 <div class="col-12 p-0 mid3 d-md-none d-lg-block d-sm-block parallax"></div>
                 
                 <!-- CARD END -->
-                
+                <?php $myfile = fopen("footer.php", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("footer.php"));
+fclose($myfile);?>
                 <!-- FOOTER START -->
                 
-                <footer class="mid4">
+                <!-- <footer class="mid4">
                     <nav id="navbot" class="navbar navbar-expand bg-dark navbar-dark mt-3 rounded-pill rounded-xs-none container-fluid">
                         <div class="collapse navbar-collapse justify-content-center row" id="collapsibleNavbar2">
                             <ul class="navbar-nav col-12 justify-content-center mx-xl-2">
@@ -183,7 +187,7 @@
                     </ul>
                 </div>
             </nav>
-        </footer>
+        </footer> -->
     </div>
         
         <!-- FOOTER END -->

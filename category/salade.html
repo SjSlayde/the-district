@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The District</title>
-    <link rel="shortcut icon" type="image/png" href="img/the_district_brand/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="../img/the_district_brand/favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/plat.css">
@@ -38,27 +38,40 @@
     </nav>
     <img id="img-top" src="../img/bg2.jpeg" alt="bg2">
     </header>
-        <div id="pageveggie" class="container">
-            <div class="row justify-content-between">
-                <div class="block_text-img col-12 col-xl-5 mt-3">
-                    <div class="row card">
-                        <img class="card-img-top imagecat img-fluid col-xl-6" src="../img/food/cesar_salad.jpg" alt="platsalade1">
-                        <div class="col-xl-4 card-body">
-                            <h4 class="card-title">la salade du chef</h4><p class="card-text">c'est la salade du chef quoi</p>
-                            <a href="#" class="btn btn-primary" onclick="commande(0)">Commander</a><span class="insertquantité"></span> 
-                        </div>
-                    </div>
-                </div>
-                <div class="block_text-img col-12 col-xl-5 mt-3">
-                    <div class="row card">
-                        <img class="card-img-top imagecat img-fluid col-xl-6"  src="../img/food/salad1.png" alt="platsalade2">
-                        <div class="col-xl-4 card-body">
-                            <h4 class="card-title">la salade du chef v2</h4><p class="card-text">c'est la salade du chef v2 quoi</p>
-                            <a href="#" class="btn btn-primary" onclick="commande(1)">Commander</a><span class="insertquantité"></span> 
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <div id="pageveggie" class="container">
+        <div class="row justify-content-center">
+           
+     <div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem;">
+
+      <img src="../img/food/cesar_salad.jpg" class="rounded-3 img-fluid m-auto" alt=""
+      style="width: 10rem; height: fit-content;">
+
+      <div class="card-body">
+
+        <h5 class="card-title mt-md-4">la salade du chef</h5>
+        <p class="card-text">"c'est la salade du chef quoi"</p>
+        <div class="d-flex justify-content-end">
+          <a href="#" class="btn btn-primary mt-md-5 btn-lg justify-content-center" onclick="commande(0)">Commander</a><span class="insertquantité"></span>
+        </div>
+      </div>
+    </div> 
+
+    <div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem;">
+
+        <img src="../img/food/salad1.png" class="rounded-3 img-fluid m-auto" alt=""
+        style="width: 10rem; height: fit-content;">
+
+        <div class="card-body">
+
+          <h5 class="card-title mt-md-4">la salade du chef v2</h5>
+          <p class="card-text">"c'est la salade du chef v2 quoi"</p>
+          <div class="d-flex justify-content-end">
+            <a href="#" class="btn btn-primary mt-md-5 btn-lg justify-content-center" onclick="commande(1)">Commander</a><span class="insertquantité"></span>
+          </div>
+        </div>
+      </div> 
+        </div>
             <div id="insertbgimg">
                 <form id="form" class="container mt-3">
                         <div class="row m-3">

@@ -36,34 +36,39 @@ document.addEventListener("DOMContentLoaded", () => {
                         })//fait tourner le carousel avec Precedent
                         
                         
-                        function pages(page){ //fonctionne pour afficher la page en fonction du compteur
+            function pages(page){ //fonctionne pour afficher la page en fonction du compteur page
   
-                            veggie.style.display= 'none'
-                            hamburger.style.display= 'none'
-                            pasta.style.display= 'none'
-                            wrap.style.display= 'none'
-                            pizza.style.display= 'none'
-                            asianfood.style.display='none'
-
+                veggie.style.display= 'none'
+                hamburger.style.display= 'none'
+                pasta.style.display= 'none'
+                wrap.style.display= 'none'
+                pizza.style.display= 'none'
+                asianfood.style.display='none'
+               
                 if (page==1) {
                     veggie.style.display= 'block'
                 }
+
                 if (page==2) {
                     hamburger.style.display= 'block'
                 }
+
                 if (page==3) {
                     pasta.style.display= 'block'
                 }
+
                 if (page==4) {
                     wrap.style.display='block'
                 }
+
                 if (page==5) {
                     pizza.style.display='block'
                 }
+                
                 if (page==6) {
                     asianfood.style.display='block'
                 }}
-            });
+            });//fin de fonction
             
             if(document.getElementById('insertbgimg')!=null){ //regade si insert insertbgimg existe et la fait diparaitre pour la faire faire apparaitre plus tard
             document.getElementById('insertbgimg').style.display="none"}
