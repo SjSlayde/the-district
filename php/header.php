@@ -4,7 +4,7 @@
  
  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
    <a class="navbar-brand" href="#">
-     <img src="img/the_district_brand/logo_transparent.png" width="70" class="d-inline-block align-text-top" alt="navicon"/>
+     <img src="../img/the_district_brand/logo_transparent.png" width="70" class="d-inline-block align-text-top" alt="navicon"/>
    </a>
 
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -32,6 +32,6 @@
 <!--Navbar end-->
 <!--Image top-->
 
-<img id="img-top" src="img/bg2.jpeg" alt="bg2">
+<img id="img-top" src="../img/bg2.jpeg" alt="bg2">
 
 </header>
