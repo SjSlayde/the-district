@@ -33,7 +33,7 @@ require_once('headerindex.php');
                     <a class="textnav nav-link active" href="index.html" title="Accueil">Accueil</a>
                 </li>
                 <li class="nav-item px-5">
-                    <a class="textnav nav-link" href="categorie.html" title="Categorie">Categorie</a>
+                    <a class="textnav nav-link" href="../categorie.html" title="Categorie">Categorie</a>
                 </li>
                 <li class="nav-item px-5">
                     <a class="textnav nav-link" href="plat.html" title="Plat">Plat</a>
@@ -74,7 +74,7 @@ require_once('headerindex.php');
             
             
                 <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/asianfood.html">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/asianfood.html">
                         <img src="../img/category/asian_food_cat.jpg" class="card-img-top imagecat" alt="sushi">
                         <div class="card-body">
                             <h5 class="card-title">Asian Food</h5>
@@ -83,7 +83,7 @@ require_once('headerindex.php');
                 </div>
                 
                 <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/hamburger.html">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/hamburger.html">
                         <img src="../img/category/burger_cat.jpg" class="card-img-top imagecat" alt="burger">
                         <div class="card-body">
                             <h5 class="card-title">hamburger</h5>
@@ -92,7 +92,7 @@ require_once('headerindex.php');
                 </div>
                 
                 <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/pizza.html">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/pizza.html">
                         <img src="../img/category/pizza_cat.jpg" class="card-img-top imagecat" alt="sushi">
                         <div class="card-body">
                             <h5 class="card-title">Pizza</h5>
@@ -101,7 +101,7 @@ require_once('headerindex.php');
                 </div>
                 
                 <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/pasta.html">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/pasta.html">
                         <img src="../img/category/pasta_cat.jpg" class="card-img-top imagecat" alt="pasta">
                         <div class="card-body">
                             <h5 class="card-title">Pasta</h5>
@@ -109,7 +109,7 @@ require_once('headerindex.php');
                     </a>
                 </div>
                 <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/veggie.html">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/veggie.html">
                         <img src="../img/category/veggie_cat.jpg" class="card-img-top imagecat" alt="Veggie">
                         <div class="card-body">
                             <h5 class="card-title">Veggie</h5>
@@ -118,7 +118,7 @@ require_once('headerindex.php');
                   </div>
 
                   <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                      <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/wrap.html">
+                      <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/wrap.html">
                           <img src="../img/category/wrap_cat.jpg" class="card-img-top imagecat" alt="Wrap">
                           <div class="card-body">
                               <h5 class="card-title">Wrap</h5>
@@ -129,7 +129,7 @@ require_once('headerindex.php');
                     
                     <div class="fs-1 ms-md-5">Nos plats star :</div>
                     <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/pasta.html">
+                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/pasta.html">
                             <img src="../img/food/lasagnes_viande.jpg" class="card-img-top imageplat" alt="Wrap">
                             <div class="card-body">
                                 <h5 class="card-title">lasagne</h5>
@@ -139,7 +139,7 @@ require_once('headerindex.php');
                     
                     
                     <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/hamburger.html">
+                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/hamburger.html">
                             <img src="../img/food/cheesburger.jpg" class="card-img-top imageplat" alt="Wrap">
                             <div class="card-body">
                                 <h5 class="card-title">Cheesburger</h5>
@@ -149,7 +149,7 @@ require_once('headerindex.php');
 
                     
                     <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="category/pasta.html">
+                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/pasta.html">
                             <img src="../img/food/spaghetti-legumes.jpg" class="card-img-top imageplat" alt="Wrap">
                             <div class="card-body">
                                 <h5 class="card-title">Spaghetti Legumes</h5>
