@@ -17,7 +17,6 @@
 
 <?php 
 require_once('headerindex.php');
-echo $_SERVER['SCRIPT_NAME']."yop";
  ?>
     <!-- <header id="navbar">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">

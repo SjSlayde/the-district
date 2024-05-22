@@ -14,16 +14,16 @@
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
         <ul class="navbar-nav ">
                 <li class="nav-item px-5">
-                    <a class="textnav nav-link active" href="index.php" title="Accueil">Accueil</a>
+                    <a class="textnav nav-link" href="index.php" title="Accueil">Accueil</a>
                 </li>
                 <li class="nav-item px-5">
-                    <a <?php if($_SERVER['REQUEST_URI'] == " /php/categorie.php ")echo ' class="actif"';?> href="categorie.php" title="Categorie">Categorie</a>
+                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/categorie.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="categorie.php" title="Categorie">Categorie</a>
                 </li>
                 <li class="nav-item px-5">
-                    <a class="textnav nav-link" href="plat.php" title="Plat">Plat</a>
+                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/plat.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="plat.php" title="Plat">Plat</a>
                 </li>
                 <li class="nav-item px-5">
-                    <a class="textnav nav-link" href="contact.php" title="contact">contact</a>
+                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/contact.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="contact.php" title="contact">contact</a>
                 </li>
             </ul>
         </div>
@@ -35,6 +35,3 @@
 <img id="img-top" src="../img/bg2.jpeg" alt="bg2">
 
 </header>
-<?php
-echo $_SERVER['REQUEST_URI'];
-?>
