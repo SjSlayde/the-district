@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The District</title>
+    <link rel="shortcut icon" type="image/png" href="img/the_district_brand/favicon.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/categorie.css"/>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR START -->
+
+    <header id="navbar">
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="img/the_district_brand/logo_transparent.png" width="70" class="d-inline-block align-text-top" alt="navicon"/>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center col-8" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item px-5">
+                <a class="textnav nav-link" href="index.html" title="Accueil">Accueil</a>
+            </li>
+            <li class="nav-item px-5">
+                <a class="textnav nav-link active" href="categorie.html" title="Categorie">Categorie</a>
+            </li>
+            <li class="nav-item px-5">
+                <a class="textnav nav-link" href="plat.html" title="Plat">Plat</a>
+            </li>
+            <li class="nav-item px-5">
+              <a class="textnav nav-link" href="#" title="contact">contact</a>
+            </li>
+          </ul>
+        </div>
+
+    </nav>
+
+    <!-- NAVBAR END -->
+    <!-- image top -->
+
+    <img id="img-top" src="img/bg3.jpeg" alt="bg3">
+
+    </header>
+
+    <!--contenue centrale start-->
+
+    <div id="insertbgimg">
+        <form id="form" class="container mt-3">
+                <div class="row m-3">
+                    <div id="insertcommande" class="d-flex justify-content-center">
+                    </div>
+                    <div class="col-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
+                        <select class="form-select" id="quantite" aria-label="Default select example">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                      </select></div>
+                    <div class=" mt-3 col-12 mb-3">
+                        <label for="Nom" class="labelt col-3 form-label">Nom et Prénom*:</label>
+                        <input type="text" name="nom" class="form-control" id="Nom" >
+                    </div>
+                    <div class="col-md-6 col-12 mb-3">
+                        <label for="Email" class="labelt col-3 form-label">Email*:</label>
+                        <input type="text" name="Email" class="form-control" id="Email">
+                    </div>
+                    <div class="col-md-6 col-12 mb-3">
+                        <label for="Tel" class="labelt col-3 form-label">Téléphone*:</label>
+                        <input type="text" name="tel" class="form-control" id="Tel">
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="Adresse" class="labelt col-3 form-label">Votre adresse*:</label>
+                        <textarea cols="500" rows="4" name="demande" class="form-control" id="Adresse"></textarea>
+                    </div>
+                    <div class="row justify-content-between mt-3">
+                        <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="reset" id="Cancel">Annuler</button>
+                        <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="submit" id="Envoyer">Envoyer</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+
+    <!--contenue centrale end-->
+    <!--footer start-->
+        <footer>
+            <nav id="navbot" class="navbar navbar-expand bg-dark navbar-dark mt-3 rounded-pill rounded-xs-none container-fluid">
+                <div class="collapse navbar-collapse justify-content-center row" id="collapsibleNavbar2">
+                    <ul class="navbar-nav col-12 justify-content-center mx-xl-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" title="Accueil"><img src="img/social_media/icons8-facebook-48.png" class="img-fluid align-text-top" alt="navinsta"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" title="Categorie"><img src="img/social_media/icons8-instagram-48.png" class="img-fluid d-inline-block align-text-top" alt="navfb"></a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Plat"><img src="img/social_media/icons8-tiktok-48.png" class="img-fluid d-inline-block align-text-top" alt="navtt"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="contact"><img src="img/social_media/icons8-twitter-48.png" class="img-fluid d-inline-block align-text-top" alt="navx"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="contact"><img src="img/social_media/icons8-youtube-48.png" class="img-fluid d-inline-block align-text-top" alt="navyt"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+    <!--footer end-->
+    <!--script java et bootstrap-->
+
+    <script src="js/test.js"></script>
+    <script src="js/filtre.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+</html>
