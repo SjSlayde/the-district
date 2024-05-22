@@ -1,3 +1,4 @@
+
 <header id="navbar">
  
  <!--Navbar start-->
@@ -13,7 +14,12 @@
 
    <div class="collapse navbar-collapse justify-content-center col-8" id="collapsibleNavbar">
      <ul class="navbar-nav">
-       <li class="nav-item px-5">
+     <?php echo $_SERVER['SCRIPT_NAME']." yop"; 
+     if($_SERVER['SCRIPT_NAME'] == "index.php")
+          echo '<li class="nav-item px-5 actif">';
+     else
+          echo '<li>';
+     ?>
            <a class="textnav nav-link" href="index.php" title="Accueil">Accueil</a>
        </li>
        <li class="nav-item px-5">
