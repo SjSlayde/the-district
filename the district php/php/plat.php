@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../css/plat.css" />
   </head>
-  <body>
+  <body> -->
 
 <?php 
 require_once('header.php')
@@ -365,6 +365,55 @@ require_once('header.php')
     </div>
     
     <!--carousel end-->
+    <!--formulaire de commande start-->
+
+    <div id="insertbgimg" class="mt-5">
+            <form id="form" action="commande_script.php" method="POST" class="container mt-3">
+                    <div class="row m-3">
+                        
+                        <div id="insertcommande" class="d-flex justify-content-center">
+                        </div>
+                        
+                        <div class="col-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
+                            <select class="form-select" id="quantite" aria-label="Default select example">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                          </select></div>
+                        
+                          <div class=" mt-3 col-12 mb-3">
+                            <label for="Nom" class="labelt col-3 form-label">Nom et Prénom*:</label>
+                            <input type="text" name="nomprenom" class="form-control" id="Nom" >
+                        </div>
+                        
+                        <div class="col-md-6 col-12 mb-3">
+                            <label for="Email" class="labelt col-3 form-label">Email*:</label>
+                            <input type="text" name="Email" class="form-control" id="Email">
+                        </div>
+                        
+                        <div class="col-md-6 col-12 mb-3">
+                            <label for="Tel" class="labelt col-3 form-label">Téléphone*:</label>
+                            <input type="text" name="tel" class="form-control" id="Tel">
+                        </div>
+                        
+                        <div class="col-12 mb-3">
+                            <label for="Adresse" class="labelt col-3 form-label">Votre adresse*:</label>
+                            <textarea cols="500" rows="4" name="adresse" class="form-control" id="Adresse"></textarea>
+                        </div>
+                        
+                        <div class="row justify-content-between mt-3">
+                            <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="reset" id="Cancel">Annuler</button>
+                            <button class="btn btn-succes color-315F72 rounded-pill col-md-2 col-4" type="submit" id="Envoyer">Envoyer</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+
+    <!--formulaire commande end-->
+
     <!--Debut Footer/Navbar Social Media-->
 
     <?php require_once('footer.php') ?>

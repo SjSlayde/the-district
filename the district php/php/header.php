@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The District</title>
+    <link rel="shortcut icon" type="image/png" href="../img/the_district_brand/favicon.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <?php
+    if($_SERVER['REQUEST_URI'] == "/php/index.php"){echo
+        '<link rel="stylesheet" href="../css/index.css">';}
+        elseif($_SERVER['REQUEST_URI'] == "/php/plat.php"){echo
+            '<link rel="stylesheet" href="../css/plat.css">';}
+            else {echo 
+                '<link rel="stylesheet" href="../css/categorie.css">';}
+    session_start();
+    ?>
+  
+</head>
+
+  <body>
 
 <header id="navbar">
  
@@ -14,7 +35,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
         <ul class="navbar-nav ">
                 <li class="nav-item px-5">
-                    <a class="textnav nav-link" href="index.php" title="Accueil">Accueil</a>
+                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/index.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="index.php" title="Accueil">Accueil</a>
                 </li>
                 <li class="nav-item px-5">
                     <a <?php if($_SERVER['REQUEST_URI'] == "/php/categorie.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="categorie.php" title="Categorie">Categorie</a>
@@ -30,8 +51,24 @@
      </nav>
 
 <!--Navbar end-->
-<!--Image top-->
+<!--Video top-->
 
-<img id="img-top" src="../img/bg2.jpeg" alt="bg2">
+<?php if($_SERVER['REQUEST_URI'] == "/php/index.php") echo
+'<div id="parent">
+            <div id="banniere" class="row g-0">
+                <video id="video" class="col-12" src="../img/video/video_the_district.webm" style="width: 100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
+            </div>
+            <div id="recherche" class="d-none d-sm-flex">
+                <form class="col-12" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Recherche..." aria-label="Search">
+                </form>
+            </div>
+        </div>';
+        
+        else echo
+'<img id="img-top" src="../img/bg2.jpeg" alt="bg2">';
+?>
+
+<!--Banniere Top-->
 
 </header>

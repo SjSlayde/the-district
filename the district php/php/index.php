@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -10,13 +10,13 @@
     <link rel="stylesheet" class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../css/index.css">
 </head>
 
-<body>
+<body> -->
 
     <!-- NAVBAR START -->
 
 
 <?php 
-require_once('headerindex.php');
+require_once('header.php');
  ?>
     <!-- <header id="navbar">
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
