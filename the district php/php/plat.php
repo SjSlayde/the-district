@@ -13,7 +13,7 @@
 <?php 
 require_once('header.php')
 ?>
-  
+
         <!--contenue carousel start-->
         <div id="Titre" class="container">
             <div class="fs-1 ms-md-4">Tout Les Plats :</div>
@@ -391,7 +391,7 @@ require_once('header.php')
                         
                         <div class="col-md-6 col-12 mb-3">
                             <label for="Email" class="labelt col-3 form-label">Email*:</label>
-                            <input type="text" name="Email" class="form-control" id="Email">
+                            <input type="text" name="email" class="form-control" id="Email">
                         </div>
                         
                         <div class="col-md-6 col-12 mb-3">

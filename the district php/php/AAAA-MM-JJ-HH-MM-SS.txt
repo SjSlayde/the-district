@@ -1,0 +1,4 @@
+
+nom et prenom :yop, email :fqz@sesfefsf.fsef, telephone :04.24.23.12.36, adresse du client :20 rue buffon 80000 Amiens
+nom et prenom :yop, email :fqz@sesfefsf.fsef, telephone :04.24.23.12.36, adresse du client :20 rue buffon 80000 Amiens, heure de la commande :28/05/2024 09-05-48
+nom et prenom :yop, email :fqz@sesfefsf.fsef, telephone :04.24.23.12.36, adresse du client :20 rue buffon 80000 Amiens, date et heure de la commande :28/05/2024 09-05-31
