@@ -15,7 +15,7 @@ require_once('header.php')
 ?>
 
     <!--Formulaire de Contact Start-->
-    <form id="form">
+    <form action="script_contact.php" id="form">
         <div class="container mt-3">
             <div class="row mb-3">
                 <div class="col-6 mb-3">
@@ -24,11 +24,11 @@ require_once('header.php')
                 </div>
                 <div class="col-6 mb-3">
                     <label for="Prenom" class="col-3 form-label">Prénom*:</label>
-                    <input type="text" name="Prenom" class="form-control" id="Prenom" >
+                    <input type="text" name="prenom" class="form-control" id="Prenom" >
                 </div>
                 <div class="col-6 mb-3">
                     <label for="Email" class="col-3 form-label">Email*:</label>
-                    <input type="email" name="Email" class="form-control" id="Email">
+                    <input type="email" name="email" class="form-control" id="Email">
                 </div>
                 <div class="col-6 mb-3">
                     <label for="Tel" class="col-3 form-label">Téléphone*:</label>
