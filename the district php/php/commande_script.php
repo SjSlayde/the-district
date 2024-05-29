@@ -4,7 +4,7 @@ require_once("header.php")
 ?>
 <body>
     <style>
-        #yop{
+        #cat{
             width: 300px;
         }
     </style>
@@ -15,7 +15,7 @@ echo '<div class="row justify-content-center">la livraison de votre commande est
 $infoscommande = "\nnom et prenom :".$_REQUEST['nomprenom'].", email :".$_REQUEST['email'].", telephone :".$_REQUEST['tel'].", adresse du client :".$_REQUEST['adresse'].", date et heure de la commande :".date("d/m/Y H-m-s");
 
 // Ouverture en écriture seule 
-$fp = fopen("AAAA-MM-JJ-HH-MM-SS.txt", "a"); 
+$fp = fopen("commande.txt", "a"); 
 
 // Ecriture du contenu
 fputs($fp, $infoscommande); 
@@ -25,7 +25,7 @@ fclose($fp);
 ?>
 <div class="container g-0">
     <div class="row justify-content-center">
-<img id="yop" class="img-fluid" src="../img/cat_waiting.jpeg" alt="waiting">
+<img id="cat" class="img-fluid" src="../img/cat_waiting.jpeg" alt="waiting">
 </div>
 </div>
 

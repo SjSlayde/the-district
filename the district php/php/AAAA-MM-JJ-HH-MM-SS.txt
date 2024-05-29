@@ -28,3 +28,4 @@ nom et prenom :fzqfq, email :ben@ezaq.fer, telephone :0424231236, adresse du cli
 nom et prenom :fzqfq, email :ben@ezaq.fer, telephone :0424231236, adresse du client :dzqdzqfzqf 05, date et heure de la commande :28/05/2024 11-05-31
 nom et prenom :fzqfq, email :ben@ezaq.fer, telephone :0424231236, adresse du client :dzqdzqfzqf 05, date et heure de la commande :28/05/2024 11-05-40
 nom et prenom :fzqfq, email :ben@ezaq.fer, telephone :0424231236, adresse du client :dzqdzqfzqf 05, date et heure de la commande :28/05/2024 11-05-59
+nom et prenom :fzqfq, email :ben@ezaq.fer, telephone :0424231236, adresse du client :dzqdzqfzqf 05, date et heure de la commande :28/05/2024 15-05-18
