@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, "Times New Roman", sans-serif;
+    width: 100vw;
+    background: rgb(245,126,126);
+    background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
+    }
+
+    #parent {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);/*horizontal*/
+    grid-template-rows: 0.5fr  0,6fr ;/*vertical*/
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+    #banniere {
+        grid-area: 2 / 1 / 3 / 6; }
+
+    #recherche { grid-area: 2 / 3 / 3 / 4;
+                margin-top: 10vw; }
+                
+    .imagecat {
+        border-radius: 16%;
+        width: 12vw;
+        height: 20vh;
+    }
+
+    .card {
+        background-color: #315F72;
+        border: 4px solid #315F72;
+        height: 30vh;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+
+    .card-img-top {
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+
+    .card-title {
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+    
+    .card-body .btn {
+        float: right;
+    }
+
+
+    #navbot{
+        margin-left: 41vw;
+        width: 19vw;
+        background-color: #315F72;
+    }
+    
+    .btn{
+        filter:drop-shadow( 0 0 0.25rem black);
+        transition: all 0.25s;
+    } .btn:hover{
+        transform: scale(1.10);
+    }
+
+
+        button.btn {
+        background-color: #315F72;
+    }   button.btn:hover{
+        background-color: #315F72;
+    }
+
+    .color-315F72 {
+        background-color:#315F72;
+    }
+
+    #img-top {
+        width: 100vw;
+        height: 40vh;
+    }
+    
+    .textnav {
+        font-size: 30px;
+        font-family: cursive;
+    }
+    
+    #insertbgimg {
+        background-image: url("../img/fosyyyy.jpg");
+        background-size: 100vw;
+        background-position-y: center;
+        border: #315F72 1px solid;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+    
+    .labelt {
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+
+    p {
+        color: white;
+        filter:drop-shadow( 0 0 0.25rem black)
+    }
+    
+    .row button{
+        color: white;
+    }
+
+    @media screen and (max-width: 926px) 
+{
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
+    .imagecat{
+        width: 45vw;
+    }
+    .card {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) 
+{
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
+    .imagecat{
+        width: 100vw;
+    }
+    .card {
+        height: auto;
+        width: auto;
+    }
+}

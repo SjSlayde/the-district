@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, "Times New Roman", sans-serif;
+    width: 100vw;
+    background: rgb(245,126,126);
+    background: linear-gradient(90deg, rgba(245,126,126,1) 0%, rgba(240,173,158,1) 30%, rgba(239,181,163,1) 50%, rgba(240,170,156,1) 70%, rgba(245,126,126,1) 100%); 
+    }
+    #insertbgimg {
+        background-image: url("fil rouge/img/ibg.jpg");
+        background-size: 100% ;
+    }
+
+    #parent {
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);/*horizontal*/
+    grid-template-rows: 0.5fr  0,6fr ;/*vertical*/
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+
+    #banniere {
+        grid-area: 2 / 1 / 3 / 6; }
+
+    #recherche { grid-area: 2 / 3 / 3 / 4;
+                margin-top: 10vw; }
+                
+    .imagecat {
+        margin-top: 1px;
+        padding: 0;
+        border-radius: 40%;
+        border: 4px solid #315F72;
+        width: 18vw;
+        height: 25vh;
+        transition: 1s ease;
+    } .imagecat:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 1s ease;
+        }
+
+    #video {
+        width: 100%;
+        object-fit: fill;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    #navbot{
+        margin-left: 41vw;
+        width: 19vw;
+        background-color: #315F72;
+    }
+    button{ border: #315F72 1px solid;
+        color: #315F72;
+    }
+
+    .color-315F72 {
+        background-color:#315F72;
+    }
+
+    #img-top {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .textnav{
+        font-size: 30px;
+        font-family: cursive;
+    }
+    
+    #insertbgimg{
+        background-image: url("../img/ibg.jpg");
+        border: #315F72 1px solid;
+    }
+
+    .btn{
+        filter:drop-shadow( 0 0 0.25rem black);
+        transition: all 0.25s;
+    } .btn:hover{
+        transform: scale(1.10);
+    }
+
+
+        button.btn {
+        background-color: #315F72;
+        transition: all 0.25s;
+    }   button.btn:hover{
+        background-color: #315F72;
+        transform: scale(1.10);
+    }
+
+    .card { width: auto;
+        background-color: rgba(240,173,158,0.1);
+        filter:drop-shadow( 0 0 0.25rem black) }
+    .card-title{
+        color: white;
+    }
+
+    .row button{
+        color: white;
+    }
+    @media screen and (max-width: 926px) 
+{
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
+    .imagecat{
+        width: 45vw;
+    }
+    .imageplat{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width: 768px) 
+{
+    #navbot{
+        margin-left: 0vw;
+        width: 100vw;
+    }
+    .imagecat{
+        width: 100vw;
+    }
+    .imageplat{
+        width: 100vw;
+    }
+}
