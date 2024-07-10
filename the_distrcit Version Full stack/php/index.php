@@ -2,7 +2,7 @@
 <?php 
 require_once('header.php');
 
-$stmt = $conn->prepare("SELECT * FROM categorie");
+$stmt = $conn->prepare("SELECT * FROM categorie WHERE active = 'YES'");
 
 try {
 
@@ -27,7 +27,7 @@ $result = $stmt->fetchAll();
             $i = 0;
                 foreach($result as $category){
                     echo '<div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="categorie.php">
+                    <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="plat.php?numcat='.$category['id'].'">
                         <img src="../img/category/'.$category['image'].'" class="card-img-top imagecat" alt="'.$category['libelle'].'">
                         <div class="card-body">
                             <h5 class="card-title">'.$category['libelle'].'</h5>
@@ -44,7 +44,7 @@ $result = $stmt->fetchAll();
 
                     <?php 
 
-                        $stmt = $conn->prepare("SELECT p.id_categorie,c.id_plat,SUM(quantite) as quantite_vendue,SUM(quantite)*prix as rentabilite,p.libelle,p.description,p.prix,p.image FROM commande c LEFT JOIN plat p ON c.id_plat =p.id WHERE c.etat != 'Annulée'  GROUP BY c.id_plat ORDER BY rentabilite DESC;");
+                        $stmt = $conn->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) as quantite_vendue,SUM(quantite)*prix as rentabilite,p.libelle,p.description,p.prix,p.image FROM commande c LEFT JOIN plat p ON c.id_plat =p.id WHERE c.etat != 'Annulée'  GROUP BY c.id_plat ORDER BY rentabilite DESC;");
 
                         try {
 
@@ -59,12 +59,8 @@ $result = $stmt->fetchAll();
 
                         $i = 0;
                         foreach($result as $plat){
-                            $stmt= $conn->prepare("SELECT libelle FROM categorie WHERE id = :id");
-                            $stmt->bindParam(':id',$plat['id_categorie']);
-                            $stmt->execute();
-                            $stockcat = $stmt->fetch();
                             echo '  <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
-                                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="../category/'.$stockcat['libelle'].'.html">
+                                        <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="commande.php?platcom='.$plat["id"].'">
                                             <img src="../img/food/'.$plat["image"].'" class="card-img-top imageplat" alt="'.$plat["libelle"].'">
                                             <div class="card-body">
                                                 <h5 class="card-title">'.$plat["libelle"].'</h5>
@@ -87,11 +83,3 @@ $result = $stmt->fetchAll();
                 ?>
 
     </div>
-
-        <script src="../js/test.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    </body>
-    </html>

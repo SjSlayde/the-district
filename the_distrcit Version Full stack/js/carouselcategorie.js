@@ -1,8 +1,8 @@
-var precedent = document.getElementById("precedent")
-var suivant = document.getElementById("suivant") //definie les bouton Precedent et suivant
+const precedent = document.getElementById("precedent")
+const suivant = document.getElementById("suivant") //definie les bouton Precedent et suivant
 
 document.getElementById('page2').style.display='none' //fait disparaitre la page 2
-var page = 1 //compteur de page
+let page = 1 //compteur de page
 
 suivant.addEventListener('click',function suivant(){
     page++

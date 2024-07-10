@@ -42,7 +42,7 @@ body {
         filter:drop-shadow( 0 0 0.25rem black)
     }
     
-    .card-body .btn {
+    .card-body {
         float: right;
     }
 
