@@ -1,13 +1,13 @@
 <?php 
 
-class requete// a faire fonctionner 
+class requete
 {
     // Propriétés de la classe
     private $_selectall;
     private $_conn;
     private $_select;
 
-
+    //set la connection avec la base de donnees
     public function setConnection($servername,$dbname,$username,$password){
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -56,7 +56,7 @@ class requete// a faire fonctionner
             $this->_select->bindParam(':id' , $id);
             }
 
-            
+
             //Select avec condition 
         public function setSelectcondition($table,$condition){
             if($table == 'plat' && $condition == 'plusvendue'){
@@ -113,7 +113,20 @@ class requete// a faire fonctionner
 
         return $this->_selectall;
 
-    }
+    }}
 
-    }
+//exemple pour creer un requete
+ 
+//creer l'object requete:
+//     $p = new requete();
+
+
+//set la connection avec la base de donnée:
+//     $p->setConnection($servername,$dbname,$username,$password);
+
+//Selectionne la requete souhaiter:
+//     $p->setSelectall('categorie');
+
+//resort le resultat de la requete dans la variable $req:
+//    $req = $p->getSelectall('all');
 ?>
