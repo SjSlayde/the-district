@@ -1,6 +1,14 @@
 
 <?php 
-require_once("header.php")
+require_once("header.php");
+require('class/DAO.php');
+
+  $p = new requete();
+  $p->setConnection($servername,$dbname,$username,$password);
+  $id = intval($_POST['stock']);
+  $p->setSelectone('plat',$id);
+  $commande = $p->getSelectall('one');
+ unset($p);
 ?>
 <body>
     <style>
@@ -9,17 +17,6 @@ require_once("header.php")
         }
     </style>
     <?php 
-      $stmt = $conn->prepare('SELECT * FROM plat WHERE id = :id;');
-      $stmt->bindParam(':id', $_POST['stock']);
-      try {
-
-        $stmt->execute();
-
-    } catch (PDOException $e) {
-
-        echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
-    }
-      $commande = $stmt->fetch();
 
 echo '<div class="row justify-content-center">la livraison de votre commande est estimer a  '.date('H:i:s', strtotime('+30 minutes', strtotime(date('H:i:s'))))." elle sera livrer au nom de ".$_REQUEST["nomprenom"]." a l'adresse ".$_REQUEST["adresse"]."</div>";
 
@@ -27,7 +24,7 @@ $infoscommande = "\nnom et prenom :".$_REQUEST['nomprenom'].", email :".$_REQUES
                         " plat commander : ".$commande['libelle']." nombre commander : ".$_REQUEST['quantite']." prix payer :".$commande['prix'] * $_REQUEST['quantite'];
 
 // Ouverture en écriture seule 
-$fp = fopen("commande.txt", "a"); 
+$fp = fopen("fichier_texte/"."commande.txt", "a"); 
 
 // Ecriture du contenu
 fputs($fp, $infoscommande); 

@@ -1,24 +1,17 @@
 <?php 
-require_once('header.php')
+require_once('header.php');
+require('class/DAO.php');
+ $p = new requete();
+ $p->setConnection($servername,$dbname,$username,$password);
+ $p->setSelectall('categorie');
+ $result = $p->getSelectall('all');
+unset($p);
 ?>
   
   <!--Debut du carousel-->
   <!--premiere page carousel javascript-->
 
   <?php
-
-    $stmt = $conn->prepare("SELECT * FROM categorie WHERE active ='YES'");
-
-try {
-
-    $stmt->execute();
-
-} catch (PDOException $e) {
-
-    echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
-}
-
-$result = $stmt->fetchAll();
             
             $i = 1;
                 foreach($result as $category){

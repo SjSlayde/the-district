@@ -1,19 +1,12 @@
 
 <?php 
 require_once('header.php');
-
-$stmt = $conn->prepare("SELECT * FROM categorie WHERE active = 'YES'");
-
-try {
-
-    $stmt->execute();
-
-} catch (PDOException $e) {
-
-    echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
-}
-
-$result = $stmt->fetchAll();
+require('class/DAO.php');
+ $p = new requete();
+ $p->setConnection($servername,$dbname,$username,$password);
+ $p->setSelectall('categorie');
+$req = $p->getSelectall('all');
+unset($p);
  ?>
 
 <div>   
@@ -25,7 +18,7 @@ $result = $stmt->fetchAll();
             
             <?php
             $i = 0;
-                foreach($result as $category){
+                foreach($req as $category){
                     echo '<div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
                     <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="plat.php?numcat='.$category['id'].'">
                         <img src="../img/category/'.$category['image'].'" class="card-img-top imagecat" alt="'.$category['libelle'].'">
@@ -43,22 +36,14 @@ $result = $stmt->fetchAll();
                     <div class="fs-1 ms-md-5">Nos plats star :</div>
 
                     <?php 
-
-                        $stmt = $conn->prepare("SELECT p.id,p.id_categorie,c.id_plat,SUM(quantite) as quantite_vendue,SUM(quantite)*prix as rentabilite,p.libelle,p.description,p.prix,p.image FROM commande c LEFT JOIN plat p ON c.id_plat =p.id WHERE c.etat != 'Annulée'  GROUP BY c.id_plat ORDER BY rentabilite DESC;");
-
-                        try {
-
-                            $stmt->execute();
-
-                        } catch (PDOException $e) {
-
-                            echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
-                        }
-
-                        $result = $stmt->fetchAll();
-
+unset($req);
+$pd = new requete();
+$pd->setConnection($servername,$dbname,$username,$password);
+$pd->setSelectcondition('plat','plusvendue');
+$req = $pd->getSelectall('all');
+unset($pd);
                         $i = 0;
-                        foreach($result as $plat){
+                        foreach($req as $plat){
                             echo '  <div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">
                                         <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="commande.php?platcom='.$plat["id"].'">
                                             <img src="../img/food/'.$plat["image"].'" class="card-img-top imageplat" alt="'.$plat["libelle"].'">
@@ -72,6 +57,7 @@ $result = $stmt->fetchAll();
                             break;
                             };
                         };
+                        unset($req);
                     ?>
                     </div>
                     </div>

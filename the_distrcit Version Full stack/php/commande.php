@@ -1,9 +1,13 @@
 <?php
 require_once('header.php');
+require('class/DAO.php');
 
-  $stmt = $conn->prepare('SELECT * FROM plat WHERE id = :id;');
-  $stmt->execute(array(':id' => $_GET['platcom']));
-  $plat = $stmt->fetch();
+  $p = new requete();
+  $p->setConnection($servername,$dbname,$username,$password);
+  $id = intval($_GET['platcom']);
+  $p->setSelectone('plat',$id);
+  $plat = $p->getSelectall('one');
+ unset($p);
 ?>
 
 
@@ -29,7 +33,7 @@ require_once('header.php');
         </div>
                     </div>
                         
-                        <div class="col-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
+                        <div class="col-6 col-md-1" id="ChoixQuantité"><label for="quantite" class="labelt form-label">Quantité</label>
                             <select class="form-select" id="quantite" name='quantite' aria-label="Default select example">
                             <option value="1" selected>1</option>
                             <option value="2">2</option>

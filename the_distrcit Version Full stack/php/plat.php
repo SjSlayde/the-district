@@ -1,5 +1,6 @@
 <?php 
-require_once('header.php')
+require_once('header.php');
+require('class/DAO.php');
 ?>
 
         <div id="Titre" class="container">
@@ -7,27 +8,20 @@ require_once('header.php')
         </div>
         <div id="checkplathtml" class="row justify-content-center">
         <?php
+$p = new requete();
+$p->setConnection($servername,$dbname,$username,$password);
+
           if(isset($_GET['numcat'])){
-            $stmt = $conn->prepare("SELECT plat.libelle AS platnom, plat.image, plat.description, categorie.libelle AS catnom ,plat.id ,id_categorie
-                              FROM plat LEFT JOIN categorie on plat.id_categorie = categorie.id
-                                                   WHERE id_categorie = :id
-                                                          ORDER BY categorie.libelle DESC");
-            $stmt->bindParam(':id' , $_GET['numcat']);
+
+            $stocknum = intval($_GET['numcat']); 
+            $p->setSelectcondition('plat',$stocknum);
+          
           } else {
-                  $stmt = $conn->prepare("SELECT plat.libelle AS platnom, plat.image, plat.description, categorie.libelle AS catnom ,plat.id
-                              FROM plat LEFT JOIN categorie on plat.id_categorie = categorie.id
-                                                          ORDER BY categorie.libelle DESC");
-          }
-try {
+            $p->setSelectcondition('plat','toutlesplat');
+                                                          }
 
-    $stmt->execute();
-
-} catch (PDOException $e) {
-
-    echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
-}
-
-$result = $stmt->fetchAll();
+$result = $p->getSelectall('all');
+unset($p);
 
 $stock == 'null';
             $i = 1;
@@ -47,8 +41,9 @@ $stock == 'null';
                           <h5 class="card-title mt-md-4">'.$plat['platnom'].'</h5>
                           <p class="card-text">"'.$plat['description'].'"</p>
                           <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary btn-lg position-absolute bottom-0 end-0" name="platcom" value="'.$plat['id'].'">Commander</button>
-                          </div>
+                            <button type="submit" class="d-none d-md-block btn btn-primary btn-lg position-absolute bottom-0 end-0" name="platcom" value="'.$plat['id'].'">Commander</button>
+                            <button type="submit" class="d-block d-md-none btn btn-primary btn-lg position-absolute bottom-0 start-0" name="platcom" value="'.$plat['id'].'">Commander</button>
+                            </div>
                         </div>
                         </div>';
                   if($i % 2 == 0){echo '</div>';}
