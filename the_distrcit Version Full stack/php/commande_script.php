@@ -17,6 +17,9 @@ require('class/DAO.php');
         }
     </style>
     <?php 
+    $total = $commande['prix'] * $_REQUEST['quantite'];
+    $date = date("Y-m-d H:m:s-0000");
+    // 2021-07-20 07:11:06.000
 
 echo '<div class="row justify-content-center">la livraison de votre commande est estimer a  '.date('H:i:s', strtotime('+30 minutes', strtotime(date('H:i:s'))))." elle sera livrer au nom de ".$_REQUEST["nomprenom"]." a l'adresse ".$_REQUEST["adresse"]."</div>";
 
@@ -31,6 +34,12 @@ fputs($fp, $infoscommande);
 
 // Fermeture du fichier  
 fclose($fp);
+
+$ajout = new Ajoutcommande($commande['id'],$_REQUEST['quantite'],$total,'En préparation',$_REQUEST['nomprenom'],$_REQUEST['tel'],$_REQUEST['email'],$_REQUEST['adresse']);
+$ajout->setConnection($servername,$dbname,$username,$password);
+$ajout->setAjout();
+
+
 ?>
 <div class="container g-0">
     <div class="row justify-content-center">
@@ -38,7 +47,10 @@ fclose($fp);
 </div>
 </div>
 
+
+
 <?php
+
 require_once("footer.php")
 ?>
 </body>

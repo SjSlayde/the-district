@@ -10,5 +10,5 @@ $titre = date("Y-m-d-H-i-s");
      // Fermeture du fichier  
      fclose($fp);
 
-     header("Location:index.php")
+     header("Location:index.php");
      ?>
