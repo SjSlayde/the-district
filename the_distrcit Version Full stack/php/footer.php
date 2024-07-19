@@ -17,6 +17,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" title="contact"><img src="../img/social_media/icons8-youtube-48.png" class="img-fluid d-inline-block align-text-top" alt="navyt"></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mention_legales.php" title="mention_legales"><img src="../img/social_media/icons8-mention-legales-50.png" class="img-fluid d-inline-block align-text-top" alt="navyt"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="politique_de_confidentialité.php" title="politique_de_confidentialité"><img src="../img/social_media/icons8-politique-de-confidentialité-50.png" class="img-fluid d-inline-block align-text-top" alt="navyt"></a>
+                        </li>
                     </ul>
                 </div>
             </nav>

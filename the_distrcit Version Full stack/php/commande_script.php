@@ -2,6 +2,7 @@
 <?php 
 require_once("header.php");
 require('class/DAO.php');
+require_once 'class/mail.php';
 
   $p = new requete();
   $p->setConnection($servername,$dbname,$username,$password);
@@ -25,6 +26,10 @@ echo '<div class="row justify-content-center">la livraison de votre commande est
 
 $infoscommande = "\nnom et prenom :".$_REQUEST['nomprenom'].", email :".$_REQUEST['email'].", telephone :".$_REQUEST['tel'].", adresse du client :".$_REQUEST['adresse'].", date et heure de la commande :".date("d/m/Y H-m-s").
                         " plat commander : ".$commande['libelle']." nombre commander : ".$_REQUEST['quantite']." prix payer :".$commande['prix'] * $_REQUEST['quantite'];
+
+$textmail = 'votre commande de '.$_REQUEST['quantite'].' '.$commande['libelle'].' au nom de '.$_REQUEST['nomprenom'].' est en preparation elle sera livrée a l\'adresse '.$_REQUEST['adresse'];
+//appel de la fonction pour envoyer un mail
+envoiemail($textmail,$_REQUEST['email'],$_REQUEST['nomprenom']);
 
 // Ouverture en écriture seule 
 $fp = fopen("fichier_texte/"."commande.txt", "a"); 
