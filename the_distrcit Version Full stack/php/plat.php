@@ -26,7 +26,7 @@ unset($p);
 ?>
 
 <div id="Titre" class="container">
-    <div class="fs-1 ms-md-4"><?php if(isset($resultcat)){echo 'Tous Les '.$resultcat['libelle'].'s';} else {echo 'Tous Les Plats';}?> :</div>
+    <div class="fs-1 ms-md-4"><?php if(isset($resultcat)){echo 'Toutes Les '.$resultcat['libelle'].'s';} else {echo 'Tous Les Plats';}?> :</div>
 </div>
 <div id="checkplathtml" class="g-0 p-0 row justify-content-center">
 
