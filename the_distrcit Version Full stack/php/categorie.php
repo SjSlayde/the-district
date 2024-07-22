@@ -18,12 +18,12 @@ unset($p);
                   if($i==1){
                     echo '<div id="page1">
                     <div class="container"> 
-                            <div class="fs-1 texte ms-md-4">Toute les catégories :</div><br>
+                            <div class="fs-1 texte ms-md-4">Toutes les catégories :</div><br>
                               <div class="row justify-content-between mt-3">';
                   }  elseif($i==7) {
                     echo '<div id="page2">
                     <div class="container"> 
-                            <div class="fs-1 texte ms-md-4">Toute les catégories :</div><br>
+                            <div class="fs-1 texte ms-md-4">Toutes les catégories :</div><br>
                               <div class="row justify-content-between mt-3">';
                   };
                   echo '<div class="card col-12 col-sm-6 col-md-4 mt-3 mx-auto">

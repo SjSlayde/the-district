@@ -3,26 +3,34 @@ require_once('header.php');
 require('class/DAO.php');
 ?>
 
-        <div id="Titre" class="container">
-            <div class="fs-1 ms-md-4">Tout Les Plats :</div>
-        </div>
-        <div id="checkplathtml" class="row justify-content-center">
-        <?php
+<?php
 $p = new requete();
 $p->setConnection($servername,$dbname,$username,$password);
 
-          if(isset($_GET['numcat'])){
-
-            $stocknum = intval($_GET['numcat']); 
-            $p->setSelectcondition('plat',$stocknum);
-          
-          } else {
-            $p->setSelectcondition('plat','toutlesplat');
-                                                          }
+if(isset($_GET['numcat'])){
+  
+  $stocknum = intval($_GET['numcat']); 
+  $p->setSelectcondition('plat',$stocknum);
+  $cat = new requete();
+  $cat->setConnection($servername,$dbname,$username,$password);
+  $cat->setSelectone('categorie',$stocknum);
+  $resultcat = $cat->getSelectall('one');
+  unset($cat);
+  
+} else {
+  $p->setSelectcondition('plat','toutlesplat');
+}
 
 $result = $p->getSelectall('all');
 unset($p);
+?>
 
+<div id="Titre" class="container">
+    <div class="fs-1 ms-md-4"><?php if(isset($resultcat)){echo 'Tous Les '.$resultcat['libelle'].'s';} else {echo 'Tous Les Plats';}?> :</div>
+</div>
+<div id="checkplathtml" class="g-0 p-0 row justify-content-center">
+
+<?php
 $stock == 'null';
             $i = 1;
             $nbpage = 1;
@@ -35,7 +43,7 @@ $stock == 'null';
                   } 
 
                   if($i % 2 != 0) {echo '<div class="row justify-content-center">';}
-                  echo '<div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem;">
+                  echo '<div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem">
                           <img src="../img/food/'.$plat['image'].'" class="rounded-3 img-fluid m-auto" alt="'.$plat['platnom'].'food" style="width: 10rem; height: fit-content;">
                         <div class="card-body">
                           <h5 class="card-title mt-md-4">'.$plat['platnom'].'</h5>
@@ -60,7 +68,7 @@ $stock == 'null';
 
         
             <!--bouton Bouton Carousel-->
-    <div id="boutonarmy" class="container">
+    <div id="boutonarmy" class="container <?php if($i<4) echo 'd-none';?>">
     <div id="yop" class="row justify-content-around mt-3">
         <button class=" btn rounded-pill col-md-2 col-4" type="button" id="precedent">precedent</button>
         <button class=" btn rounded-pill col-md-2 col-4" type="button"  id="suivant"> suivant</button>

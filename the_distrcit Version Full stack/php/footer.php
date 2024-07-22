@@ -1,5 +1,5 @@
-<footer class="mid4">
-                    <nav id="navbot" class="navbar navbar-expand bg-dark navbar-dark mt-3 rounded-pill rounded-xs-none container-fluid">
+<footer class="mid4 p-0 g-0">
+                    <nav id="navbot" class="navbar navbar-expand bg-dark navbar-dark mt-3 rounded-pill rounded-xs-none container-fluid <?php // if(isset($i) AND $i<4) echo"fixed-bottom"; ?>">
                         <div class="collapse navbar-collapse justify-content-center row" id="collapsibleNavbar2">
                             <ul class="navbar-nav col-12 justify-content-center mx-xl-2">
                                 <li class="nav-item">

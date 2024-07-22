@@ -12,7 +12,7 @@ require('class/DAO.php');
 
 
     <div id="insertbgimg" class="mt-5">
-            <form id="form" action="commande_script.php" method="POST" class="container mt-3">
+            <form id="form" action="script_commande.php" method="POST" class="container mt-3">
                     <div class="row m-3">
                         
                         <div id="insertcommande" class="d-flex justify-content-center">

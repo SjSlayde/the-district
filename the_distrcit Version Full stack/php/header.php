@@ -25,7 +25,7 @@ try {
     <?php
     if($_SERVER['REQUEST_URI'] == "/php/index.php"){echo
         '<link rel="stylesheet" href="../css/index.css">';}
-        elseif($_SERVER['REQUEST_URI'] == "/php/plat.php"){echo
+        elseif($_SERVER['REQUEST_URI'] == "/php/plat.php?numcat=".$_GET['numcat']."" || $_SERVER['REQUEST_URI'] == "/php/plat.php"){echo
             '<link rel="stylesheet" href="../css/plat.css">';}
             else {echo 
                 '<link rel="stylesheet" href="../css/categorie.css">';}
@@ -55,7 +55,7 @@ try {
                     <a <?php if($_SERVER['REQUEST_URI'] == "/php/categorie.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="categorie.php" title="Categorie">Categorie</a>
                 </li>
                 <li class="nav-item px-5">
-                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/plat.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="plat.php" title="Plat">Plat</a>
+                    <a <?php if($_SERVER['REQUEST_URI'] == "/php/plat.php?numcat=".$_GET['numcat']."" || $_SERVER['REQUEST_URI'] == "/php/plat.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="plat.php" title="Plat">Plat</a>
                 </li>
                 <li class="nav-item px-5">
                     <a <?php if($_SERVER['REQUEST_URI'] == "/php/contact.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="contact.php" title="contact">contact</a>
