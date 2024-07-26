@@ -3,32 +3,19 @@
 ?>
 
 <?php 
- require('class.DAO.php');
- $p = new requete();
- $p->setConnection($servername,$dbname,$username,$password);
- $p->setSelectall('plat');
-$req = $p->getSelectall();
- 
- 
- 
- 
- 
- 
- 
- 
- 
- foreach($req as $plat){
-    echo '<div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem;">
-                          <img src="../img/food/'.$plat['image'].'" class="rounded-3 img-fluid m-auto" alt="'.$plat['platnom'].'food" style="width: 10rem; height: fit-content;">
-                        <div class="card-body">
-                          <h5 class="card-title mt-md-4">'.$plat['platnom'].'</h5>
-                          <p class="card-text">"'.$plat['description'].'"</p>
-                          <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary btn-lg position-absolute bottom-0 end-0" name="platcom" value="'.$plat['id'].'">Commander</button>
-                          </div>
-                        </div>
-                        </div>';
-};
+$str = 'michel';
+ $result = nettoyerChaine($str);
+function nettoyerChaine($string) {
+  //filtre pour les caractere speciaux merci blackboxAI
+  $filtrecaracteresSpeciaux = ["\x00","\n","\r","\\","'","\"","\x1a","\t","\f","\r\n","?","!",".",",",
+                              ":",";","-","_","=","+","*","/","\\","^","$","#","%","&","|","~","`","´",
+                              "^","¨","¸","˛","ˇ","˘","¯","¨","°","²","³","⁴","⁵","⁶","⁷","⁸","⁹","¹⁰",];
+  
+  //remplace tout les caractere speciaux par rien
+  $string = str_replace($filtrecaracteresSpeciaux, '', $string);
+  return $string;
+  }
+  echo $result;
  ?>
  
 

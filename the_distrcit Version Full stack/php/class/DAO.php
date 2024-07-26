@@ -73,7 +73,7 @@ class requete
                     $this->_select->bindParam(':id' , $condition);
 
                 } elseif ($table == 'plat' && $condition == 'toutlesplat') {
-                    $this->_select = $this->_conn->prepare("SELECT plat.libelle AS platnom, plat.image, plat.description, categorie.libelle AS catnom ,plat.id
+                    $this->_select = $this->_conn->prepare("SELECT plat.libelle AS platnom, plat.prix, plat.image, plat.description, categorie.libelle AS catnom ,plat.id
                                                 FROM plat LEFT JOIN categorie on plat.id_categorie = categorie.id
                                                     ORDER BY categorie.libelle DESC");
                 } else {
@@ -138,19 +138,30 @@ class Ajoutcommande extends requete
         $this->_adresse_client = $adresse_client;
     }
 
+    public function nettoyerChaine($string) {
+        //filtre pour les caractere speciaux merci blackboxAI
+        $filtrecaracteresSpeciaux = ["\x00","\n","\r","\\","'","\"","\x1a","\t","\f","\r\n","?","!",".",",",
+                                    ":",";","-","_","=","+","*","/","\\","^","$","#","%","&","|","~","`","´",
+                                    "^","¨","¸","˛","ˇ","˘","¯","¨","°","²","³","⁴","⁵","⁶","⁷","⁸","⁹","¹⁰","(",")","[","]","{","}",];
+        
+        //remplace tout les caractere speciaux par rien
+        $string = str_replace($filtrecaracteresSpeciaux, '', $string);
+        return $string;
+        }
+
     public function setAjout(){
 
         $stmt = $this->_conn->prepare("INSERT INTO commande ( id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client) 
                                          VALUES (:id_plat, :quantite, :total, NOW(), :etat, :nom_client, :telephone_client, :email_client, :adresse_client); ");
         
-        $stmt->bindParam(':id_plat', $this->_id_plat);
-        $stmt->bindParam(':quantite', $this->_quantite);
-        $stmt->bindParam(':total', $this->_total);
-        $stmt->bindParam(':etat', $this->_etat); 
-        $stmt->bindParam(':nom_client', $this->_nom_client); 
-        $stmt->bindParam(':telephone_client', $this->_telephone_client); 
-        $stmt->bindParam(':email_client', $this->_email_client);
-        $stmt->bindParam(':adresse_client', $this->_adresse_client); 
+        $stmt->bindParam(':id_plat', $this->nettoyerChaine($this->_id_plat));
+        $stmt->bindParam(':quantite', $this->nettoyerChaine($this->_quantite));
+        $stmt->bindParam(':total', $this->nettoyerChaine($this->_total));
+        $stmt->bindParam(':etat', $this->nettoyerChaine($this->_etat)); 
+        $stmt->bindParam(':nom_client', $this->nettoyerChaine($this->_nom_client)); 
+        $stmt->bindParam(':telephone_client', $this->nettoyerChaine($this->_telephone_client)); 
+        $stmt->bindParam(':email_client', $this->nettoyerChaine($this->_email_client));
+        $stmt->bindParam(':adresse_client', $this->nettoyerChaine($this->_adresse_client)); 
 
         try {
                 

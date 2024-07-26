@@ -1,5 +1,4 @@
 <?php
-require_once('DAO.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 

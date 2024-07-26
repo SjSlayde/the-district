@@ -10,7 +10,6 @@ require('class/DAO.php');
  unset($p);
 ?>
 
-
     <div id="insertbgimg" class="mt-5">
             <form id="form" action="script_commande.php" method="POST" class="container mt-3">
                     <div class="row m-3">
@@ -72,5 +71,7 @@ require('class/DAO.php');
             </form>
             </div>
 <?php
+
 require_once('footer.php');
+
 ?>

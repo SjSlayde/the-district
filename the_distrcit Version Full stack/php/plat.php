@@ -48,6 +48,7 @@ $stock == 'null';
                         <div class="card-body">
                           <h5 class="card-title mt-md-4">'.$plat['platnom'].'</h5>
                           <p class="card-text">"'.$plat['description'].'"</p>
+                          <p class="card-text">prix : '.$plat['prix'].'</p>
                           <div class="d-flex justify-content-end">
                             <button type="submit" class="d-none d-md-block btn btn-primary btn-lg position-absolute bottom-0 end-0" name="platcom" value="'.$plat['id'].'">Commander</button>
                             <button type="submit" class="d-block d-md-none btn btn-primary btn-lg position-absolute bottom-0 start-0" name="platcom" value="'.$plat['id'].'">Commander</button>
