@@ -26,6 +26,11 @@ if(isset($_GET['numcat'])){
   $resultcat = $cat->getSelectall('one');
   unset($cat);
   
+} elseif(isset($_SESSION['recherche'])) {
+
+  $p->setRecherche($_SESSION['recherche']);
+  unset($_SESSION['recherche']);
+
 } else {
   //si il n'y a rien dans la viarible get numcat affiche tout les plats dans la base de données
   $p->setSelectcondition('plat','toutlesplat');
@@ -46,12 +51,13 @@ $stock == 'null';
             $i = 1;
             $nbpage = 1;
             echo '<form action="commande.php" method="get">';
+
                 foreach($result as $plat){
 
                   if (($i+3)%4 == 0) {
                     echo '<div id="page'.$nbpage.'" class="container">';
                     $nbpage++;
-                  } 
+                  }
 
                   if($i % 2 != 0) {echo '<div class="row justify-content-center">';}
                   echo '<div class="card col-4 flex-row mt-3 mx-md-5" style="width: 35rem">
@@ -73,7 +79,9 @@ $stock == 'null';
                         echo '</div>';}
                   $i++;
                 };
+
                 echo '</form>';
+                
             ?>
 
             </div> 

@@ -28,7 +28,7 @@ class requete
         if($table == 'plat'){
         $this->_select = $this->_conn->prepare("SELECT * FROM plat WHERE active = 'Yes';");
         } elseif ($table == 'categorie') {
-            $this->_select = $this->_conn->prepare("SELECT * FROM categorie WHERE active = 'Yes';;");
+            $this->_select = $this->_conn->prepare("SELECT * FROM categorie WHERE active = 'Yes';");
         } elseif ($table == 'commande')  {
             $this->_select = $this->_conn->prepare("SELECT * FROM commande;");
         } else {
@@ -36,6 +36,23 @@ class requete
             echo 'table introuvable';
         }
         }
+
+        //function pour la barre de recherche(merci chatgpt pour la requete pdo avec un nombre d'id indeterminer);
+        public function setRecherche($ids){
+            //creer un tableaux avec des '?' et les separe pas des ',' en fonction de la taille du tableaux ids
+            $placeholders = implode(',', array_fill(0, count($ids), '?'));
+
+            //creer un requete avec le nombre de '?' que contient le tableaux $placeholders
+            $sql = "SELECT plat.libelle AS platnom, plat.image, plat.description, plat.id, plat.prix FROM plat WHERE id IN ($placeholders)";
+            
+            //prepare la requete sql;
+            $this->_select = $this->_conn->prepare($sql);
+
+            // Lier les paramètres pour chaque ID
+            foreach ($ids as $index => $id) {
+                // Remplacer les '?' par les valeurs du tableau $ids, en commençant par 1 (PDO est 1-based)
+                $this->_select->bindValue($index + 1, $id, PDO::PARAM_INT);
+            }}
 
         // Méthode pour sélectionner une ligne d'une table avec une condition sur l'ID
         public function setSelectone($table,$id){

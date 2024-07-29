@@ -39,7 +39,7 @@ unset($p);
                     };
                 };
             ?>       
-                    <div class="fs-1 ms-md-5">Nos plats star :</div>
+                    <div class="fs-1 ms-md-5 mt-3">Nos plats star :</div>
 
                     <?php 
 unset($req);
@@ -64,9 +64,11 @@ unset($p);
                                         </a>
                                     </div>';
                         $i++;
-                        
+                            
                         if($i == 3){  
+
                             break;
+
                             };
                         };
 
@@ -78,7 +80,9 @@ unset($p);
                 <div class="col-12 p-0 mid3 d-md-none d-lg-block d-sm-block parallax"></div>
                 
                 <?php 
-                include_once ('footer.php')
+
+                include_once ('footer.php');
+                
                 ?>
 
     </div>

@@ -7,13 +7,13 @@ $username = "admin";
 $password = "Afpa1234";
 $dbname = "the_district";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // configurer le mode d'erreur PDO pour générer des exceptions
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "Erreur de connexion à la base de données: " . $e->getMessage();
-}
+// try {
+//     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+//     // configurer le mode d'erreur PDO pour générer des exceptions
+//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// } catch(PDOException $e) {
+//     echo "Erreur de connexion à la base de données: " . $e->getMessage();
+// }
 ?>
 
 <html lang="fr">
@@ -77,8 +77,8 @@ echo '<div id="parent">
                     <video id="video" class="col-12" src="../img/video/video_the_district.webm" style="width: 100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
                 </div>
                 <div id="recherche" class="d-none d-sm-flex">
-                    <form class="col-12" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Recherche..." aria-label="Search">
+                    <form class="col-12" action="script_recherche.php" role="search">
+                        <input class="form-control me-2" type="search" name="recherche" placeholder="Recherche..." aria-label="Search">
                     </form>
                 </div>
             </div>';

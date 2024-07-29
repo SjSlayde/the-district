@@ -1,24 +1,40 @@
 <?php 
  require('header.php');
+ require_once 'class/DAO.php';
 ?>
 
 <?php 
-$str = 'michel';
- $result = nettoyerChaine($str);
-function nettoyerChaine($string) {
-  //filtre pour les caractere speciaux merci blackboxAI
-  $filtrecaracteresSpeciaux = ["\x00","\n","\r","\\","'","\"","\x1a","\t","\f","\r\n","?","!",".",",",
-                              ":",";","-","_","=","+","*","/","\\","^","$","#","%","&","|","~","`","´",
-                              "^","¨","¸","˛","ˇ","˘","¯","¨","°","²","³","⁴","⁵","⁶","⁷","⁸","⁹","¹⁰",];
+//creation class requete
+$p = new requete();
+$p->setConnection($servername,$dbname,$username,$password);
+
+  $p->setSelectcondition('plat','toutlesplat');
   
-  //remplace tout les caractere speciaux par rien
-  $string = str_replace($filtrecaracteresSpeciaux, '', $string);
-  return $string;
+  $result = $p->getSelectall('all');
+  
+  unset($p);
+
+  $platrecherche = [];
+
+  foreach($result as $plat){
+    if (str_contains(strtolower($plat['platnom']), $_GET['recherche'])) {
+    
+      array_push($platrecherche, $plat['id']);
+  
+    } 
   }
-  echo $result;
- ?>
+  if(count($platrecherche) != 0){
+
+    $_SESSION['recherche'] = $platrecherche;
+    
+  }
+  header('location:plat.php');
+
+?>
  
 
 <?php 
+
  require_once('footer.php');
+
 ?>

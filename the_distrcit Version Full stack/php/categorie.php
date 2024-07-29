@@ -23,7 +23,7 @@ unset($p);
                   if(($i+5)%6 == 0){
                     echo '<div id="page'.$page.'">
                     <div class="container"> 
-                            <div class="fs-1 texte ms-md-4">Toutes les catégories :</div><br>
+                            <div class="fs-1 texte mt-2 ms-md-4">Toutes les catégories :</div><br>
                               <div class="row justify-content-between mt-3">';
                               $page++;
                   } 
