@@ -1,26 +1,37 @@
 <?php 
+//appelle des fichiers php header et dao
 require_once('header.php');
 require('class/DAO.php');
 ?>
 
 <?php
+//creation class requete
 $p = new requete();
 $p->setConnection($servername,$dbname,$username,$password);
 
+//si la personne souhaiter une categorie en particulier (le get numcat contient l'id de la categorie souhaiter)
 if(isset($_GET['numcat'])){
   
+  //convertie le get numcat en int(juste pour etre sur que rien ne rentre autre que des chiffres)
   $stocknum = intval($_GET['numcat']); 
+  //requete pour tout les plat de la categorie souhaiter
   $p->setSelectcondition('plat',$stocknum);
+
+  //requete pour obtenir le nom de la categorie qui se trouve dans la variable get numcat
   $cat = new requete();
   $cat->setConnection($servername,$dbname,$username,$password);
   $cat->setSelectone('categorie',$stocknum);
+  
+  //one pour obtenir une seule reponse possible
   $resultcat = $cat->getSelectall('one');
   unset($cat);
   
 } else {
+  //si il n'y a rien dans la viarible get numcat affiche tout les plats dans la base de données
   $p->setSelectcondition('plat','toutlesplat');
 }
 
+//all pour plusieur reponse possible
 $result = $p->getSelectall('all');
 unset($p);
 ?>
@@ -37,7 +48,7 @@ $stock == 'null';
             echo '<form action="commande.php" method="get">';
                 foreach($result as $plat){
 
-                  if ($i==1 || $i==5 || $i==9) {
+                  if (($i+3)%4 == 0) {
                     echo '<div id="page'.$nbpage.'" class="container">';
                     $nbpage++;
                   } 
@@ -55,9 +66,10 @@ $stock == 'null';
                             </div>
                         </div>
                         </div>';
+
                   if($i % 2 == 0){echo '</div>';}
                   
-                  if ($i==4 || $i==8 || $i==11) {
+                  if ($i % 4 == 0 ) {
                         echo '</div>';}
                   $i++;
                 };
@@ -66,8 +78,7 @@ $stock == 'null';
 
             </div> 
             </div>
-
-        
+       
             <!--bouton Bouton Carousel-->
     <div id="boutonarmy" class="container <?php if($i<4) echo 'd-none';?>">
     <div id="yop" class="row justify-content-around mt-3">

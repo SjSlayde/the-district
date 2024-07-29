@@ -9,10 +9,16 @@
     #parent {
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);/*horizontal*/
-    grid-template-rows: 0.5fr  0,6fr ;/*vertical*/
+    grid-template-columns: repeat(5, 1fr);
+    /*horizontal*/
+
+    grid-template-rows: 0.5fr  0,6fr ;
+    /*vertical*/
+
     grid-column-gap: 0px;
+
     grid-row-gap: 0px;
+    
     }
 
     #banniere {
@@ -49,7 +55,7 @@
     }
 
     #navbot{
-        width: 19vw;
+        width: 25vw;
         background-color: #315F72;
     }
     
@@ -83,10 +89,13 @@
         opacity: .4;
         filter:drop-shadow( 0 0 0.25rem black)
     } */
+
     .card { width: auto;
         background-color: rgba(240,173,158,0.1);
         filter:drop-shadow( 0 0 0.25rem black) }
+   
     .card-header, .card-footer {opacity: 1}
+    
     .card-title{
         color: white;
     }
@@ -99,10 +108,18 @@
         grid-row-gap: 0px; 
         }
         
-        .mid1 { grid-area: 1 / 1 / 6 / 2; }
-        .mid2 { grid-area: 1 / 2 / 5 / 5; }
-        .mid3 { grid-area: 1 / 5 / 6 / 6; }
-        .mid4 { grid-area: 5 / 2 / 6 / 5; }
+        
+        .mid1 { 
+            grid-area: 1 / 1 / 6 / 2; }
+        
+        .mid2 { 
+            grid-area: 1 / 2 / 5 / 5; }
+        
+        .mid3 { 
+            grid-area: 1 / 5 / 6 / 6; }
+        
+        .mid4 { 
+            grid-area: 5 / 2 / 6 / 5; }
         
         
 

@@ -1,11 +1,19 @@
 <?php
+//appelle les fichier php header et dao 
 require_once('header.php');
 require('class/DAO.php');
 
+//creation de requete 
   $p = new requete();
   $p->setConnection($servername,$dbname,$username,$password);
+  
+  //convertie get platcom en int 
   $id = intval($_GET['platcom']);
+
+  //requete pour selectionner le plat en fonction de l'id
   $p->setSelectone('plat',$id);
+
+  //sort q'une seule reponse 
   $plat = $p->getSelectall('one');
  unset($p);
 ?>
