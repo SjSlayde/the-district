@@ -25,8 +25,29 @@ $p->setConnection($servername,$dbname,$username,$password);
   if(count($platrecherche) != 0){
 
     $_SESSION['recherche'] = $platrecherche;
+    $_SESSION['table'] = 'plat';
     
+  } else {
+    $p = new requete();
+    $p->setConnection($servername,$dbname,$username,$password);
+
+  $p->setSelectall('categorie');
+  
+  $result = $p->getSelectall('all');
+  
+  unset($p);
+
+  foreach($result as $cat){
+    if (str_contains(strtolower($cat['libelle']), $_GET['recherche'])) {
+    
+        $_SESSION['numcat'] = $cat['id'];
+  
+    } 
+
+      $_SESSION['table'] = 'categorie';
   }
+  }
+  
   header('location:plat.php');
 
   require_once 'footer.php';

@@ -42,6 +42,7 @@ class requete
             //creer un tableaux avec des '?' et les separe pas des ',' en fonction de la taille du tableaux ids
             $placeholders = implode(',', array_fill(0, count($ids), '?'));
 
+            
             //creer un requete avec le nombre de '?' que contient le tableaux $placeholders
             $sql = "SELECT plat.libelle AS platnom, plat.image, plat.description, plat.id, plat.prix FROM plat WHERE id IN ($placeholders)";
             

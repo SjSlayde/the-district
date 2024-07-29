@@ -10,10 +10,16 @@ $p = new requete();
 $p->setConnection($servername,$dbname,$username,$password);
 
 //si la personne souhaiter une categorie en particulier (le get numcat contient l'id de la categorie souhaiter)
-if(isset($_GET['numcat'])){
+if(isset($_GET['numcat']) || isset($_SESSION['numcat'])){
   
-  //convertie le get numcat en int(juste pour etre sur que rien ne rentre autre que des chiffres)
-  $stocknum = intval($_GET['numcat']); 
+  if(isset($_GET['numcat'])){
+    //convertie le get numcat en int(juste pour etre sur que rien ne rentre autre que des chiffres)
+    $stocknum = intval($_GET['numcat']); 
+  } elseif(isset($_SESSION['numcat'])){
+        //convertie le get numcat en int(juste pour etre sur que rien ne rentre autre que des chiffres)
+        $stocknum = intval($_SESSION['numcat']); 
+        unset($_SESSION['numcat']);
+  }
   //requete pour tout les plat de la categorie souhaiter
   $p->setSelectcondition('plat',$stocknum);
 
@@ -81,7 +87,7 @@ $stock == 'null';
                 };
 
                 echo '</form>';
-                
+
             ?>
 
             </div> 
