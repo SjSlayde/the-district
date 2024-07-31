@@ -1,0 +1,9 @@
+"id","libelle","image","active"
+4,Pizza,pizza_cat.jpg,Yes
+5,Burger,burger_cat.jpg,Yes
+9,Wraps,wrap_cat.jpg,Yes
+10,Pasta,pasta_cat.jpg,Yes
+11,Sandwich,sandwich_cat.jpg,Yes
+12,Asian Food,asian_food_cat.jpg,No
+13,Salade,salade_cat.jpg,Yes
+14,Veggie,veggie_cat.jpg,Yes

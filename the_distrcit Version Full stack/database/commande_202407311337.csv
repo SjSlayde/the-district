@@ -1,0 +1,51 @@
+"id","id_plat","quantite","total","date_commande","etat","nom_client","telephone_client","email_client","adresse_client"
+2,4,4,16.00,2020-11-30 03:52:43.000,Livrée,Kelly Dillard,"7896547800",kelly@gmail.com,"308 Post Avenue"
+3,5,2,20.00,2020-11-30 04:07:17.000,Livrée,Thomas Gilchrist,"7410001450",thom@gmail.com,"1277 Sunburst Drive"
+4,5,1,10.00,2021-05-04 01:35:34.000,Livrée,Martha Woods,"78540001200",marthagmail.com,"478 Avenue Street"
+6,9,1,7.00,2021-07-20 06:10:37.000,Livrée,Charlie,"7458965550",charlie@gmail.com,"3140 Bartlett Avenue"
+7,10,2,8.00,2021-07-20 06:40:21.000,En cours de livraison,Claudia Hedley,"7451114400",hedley@gmail.com,"1119 Kinney Street"
+8,14,1,6.00,2021-07-20 06:40:57.000,En préparation,Vernon Vargas,"7414744440",venno@gmail.com,"1234 Hazelwood Avenue"
+9,9,4,20.00,2021-07-20 07:06:06.000,Annulée,Carlos Grayson,"7401456980",carlos@gmail.com,"2969 Hartland Avenue"
+10,16,4,12.00,2021-07-20 07:11:06.000,Livrée,Jonathan Caudill,"7410256996",jonathan@gmail.com,"1959 Limer Street"
+11,9,2,10.00,2024-07-15 10:06:58.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue buffon"
+12,9,4,20.00,2024-07-19 11:55:09.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+13,9,4,20.00,2024-07-19 11:56:48.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+14,9,4,20.00,2024-07-19 12:00:19.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+15,9,4,20.00,2024-07-19 12:01:58.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+16,9,4,20.00,2024-07-19 12:02:33.000,En préparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+17,10,1,8.00,2024-07-22 09:01:30.000,En préparation,michel veggie,"0424231236",fdqzd@michel.gr,salut ça va
+18,4,1,8.00,2024-07-22 09:39:41.000,En préparation,dqzdq,"0424231236",bbdgx@plouf.pl,fesfesn gezhj 24 
+19,4,1,8.00,2024-07-22 09:41:31.000,En préparation,dqzdq,"0424231236",bbdgx@plouf.pl,fesfesn gezhj 24 
+20,4,1,8.00,2024-07-22 09:41:56.000,En préparation,dqzdq,"0424231236",bbdgx@plouf.pl,fesfesn gezhj 24 
+21,10,1,8.00,2024-07-22 10:07:51.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+22,10,1,8.00,2024-07-22 10:09:31.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+23,10,1,8.00,2024-07-22 10:09:54.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+24,10,1,8.00,2024-07-22 10:10:25.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+25,10,1,8.00,2024-07-22 10:10:58.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+26,10,1,8.00,2024-07-22 10:13:13.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+27,10,1,8.00,2024-07-22 10:15:24.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+28,10,1,8.00,2024-07-22 10:15:43.000,En préparation,Bernard Dugenoux,"0424231236",yop@nop.fr,michemiche 20 rue
+29,15,3,24.00,2024-07-22 15:56:54.000,En préparation,yop land,"0424231236",bbdgx@plouf.pl,"20 rue buffon "
+30,15,3,24.00,2024-07-24 16:24:01.000,En préparation,michel veggie,"0424231236",fdqzd@michelgr,michel veggie le best
+31,15,1,8.00,2024-07-24 16:25:12.000,En préparation,michel veggie(,"0424231236",bbdgx@ploufpl,fesqgesqges
+32,15,1,8.00,2024-07-29 11:06:11.000,En preparation,Bernard Dugenoux,"0424231236",fdqzd@michel gr,yop 20 rue michel
+33,15,1,8.00,2024-07-29 11:12:24.000,En preparation,michel veggie,"0424231236",bbdgxplouf pl,fqgfzq 20 rue
+34,15,1,8.00,2024-07-29 11:12:59.000,En preparation,michel veggie,"0424231236",bbdgx@plouf pl,fqfzzqfzqfg
+35,15,1,8.00,2024-07-29 11:19:17.000,En preparation,michel veggie,"0424231236",bbdgx@plouf pl,fqfzzqfzqfg
+36,15,1,8.00,2024-07-29 11:21:05.000,En preparation,michel veggie,"0424231236",bbdgx@plouf pl,fqfzzqfzqfg
+37,15,1,8.00,2024-07-29 11:32:57.000,En preparation,Bernard Dugenoux,"0424231236",bbdgx@plouf pl,zqgzqgq 20 rue
+38,15,1,8.00,2024-07-29 11:33:17.000,En preparation,Bernard Dugenoux,"0424231236",bbdgx@plouf pl,zqgzqgq 20 rue
+39,15,1,8.00,2024-07-29 12:27:07.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,dqzfqzf gqz g h
+40,15,1,8.00,2024-07-30 10:15:02.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,gsbsb
+41,15,1,8.00,2024-07-30 10:15:32.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,gsbsb
+42,10,2,16.00,2024-07-31 12:14:18.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,"20 rue Buffon"
+43,10,1,8.00,2024-07-31 12:16:46.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,fzqfzqf
+44,15,1,8.00,2024-07-31 12:25:03.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+45,15,1,8.00,2024-07-31 12:25:38.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+46,15,1,8.00,2024-07-31 12:25:53.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+47,15,1,8.00,2024-07-31 12:26:20.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+48,15,1,8.00,2024-07-31 12:27:56.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+49,15,1,8.00,2024-07-31 12:29:18.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,zfqzfzqgf
+50,15,1,8.00,2024-07-31 12:30:39.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,fzqfqzf
+51,15,1,8.00,2024-07-31 12:30:55.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,fzqfqzf
+52,15,1,8.00,2024-07-31 13:16:49.000,En preparation,michel veggie,"0424231236",bbdgx@plouf.pl,fzagfqf

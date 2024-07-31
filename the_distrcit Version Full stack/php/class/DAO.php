@@ -90,7 +90,7 @@ class requete
                                                             ORDER BY rentabilite DESC;");
 
                 } elseif($table == 'plat' && is_int($condition)) {
-                    $this->_select = $this->_conn->prepare("SELECT plat.libelle AS platnom, plat.image, plat.description, categorie.libelle AS catnom ,plat.id ,id_categorie
+                    $this->_select = $this->_conn->prepare("SELECT plat.libelle AS platnom, plat.image, plat.description, categorie.libelle AS catnom ,plat.id ,id_categorie, prix
                                                          FROM plat LEFT JOIN categorie on plat.id_categorie = categorie.id
                                                              WHERE id_categorie = :id
                                                                  ORDER BY categorie.libelle DESC");

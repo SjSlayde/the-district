@@ -76,10 +76,10 @@ $dbname = "the_district";
         <?php if(isset($_SESSION['user'])){ ?>
         <div class='groupbutton d-none d-md-block justify-content-end me-3'>
                 <button class="btn btn-primary me-2" type="button" value='commande' name='commande_ou_deconnexion' onclick='window.location.href="detail_commande.php"'><?= $_SESSION['user']['nom_prenom'] ?></button>
-                <button class="btn btn-primary" type="button" value='inscription' name='commande_ou_deconnexion' onclick='window.location.href="script_deconnexion.php"'>deconnexion</button>
+                <button class="btn btn-primary" type="button" value='inscription' name='commande_ou_deconnexion' onclick='window.location.href="script/script_deconnexion.php"'>deconnexion</button>
         </div>
              <?php } else { ?>
-        <form action="script/form_inscriptioneconnexion.php" method='POST'>
+        <form action="form_inscriptioneconnexion.php" method='POST'>
         <div class='groupbutton d-none d-md-block justify-content-end me-3'>
                 <button class="btn btn-primary me-2" type="submit" value='connexion' name='inscription_et_connexion'>connexion</button>
                 <button class="btn btn-primary" type="submit" value='inscription' name='inscription_et_connexion'>inscription</button>
@@ -98,7 +98,7 @@ echo '<div id="parent">
                     <video id="video" class="col-12" src="../img/video/video_the_district.webm" style="width: 100vmax; height: 20vmax;" playsinline autoplay loop muted></video>
                 </div>
                 <div id="recherche" class="d-none d-sm-flex">
-                    <form class="col-12" action="script_recherche.php" role="search">
+                    <form class="col-12" action="script/script_recherche.php" role="search">
                         <input class="form-control me-2" type="search" name="recherche" placeholder="Recherche..." aria-label="Search">
                     </form>
                 </div>
