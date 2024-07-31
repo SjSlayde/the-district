@@ -19,7 +19,7 @@ require('class/DAO.php');
 ?>
 
     <div id="insertbgimg" class="mt-5">
-            <form id="form" action="script_commande.php" method="POST" class="container mt-3">
+            <form id="form" action="script/script_commande.php" method="POST" class="container mt-3">
                     <div class="row m-3">
                         
                         <div id="insertcommande" class="d-flex justify-content-center">
@@ -33,7 +33,7 @@ require('class/DAO.php');
             <div class="card-body">
                 <h5 class="card-title"><?= $plat['name'] ?></h5>
                 <p class="card-text"><?= $plat['description'] ?></p>
-                <p class="card-text"><small class="text-body-secondary"><?= $plat['prix'] ?></small></p>
+                <p class="card-text"><small class="text-body-secondary">prix : <?= $plat['prix'] ?></small></p>
             </div>
             </div>
         </div>

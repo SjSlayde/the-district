@@ -84,7 +84,7 @@ $mail->addBCC("bcc@example.com");
 $mail->isHTML(true);
 
 // On ajoute la/les pièce(s) jointe(s)
-$mail->addAttachment('../img/the_district_brand/linkedin_banner_image_1.png');
+$mail->addAttachment('../../img/the_district_brand/linkedin_banner_image_1.png');
 
 // Sujet du mail
 $mail->Subject = 'info commande the district';

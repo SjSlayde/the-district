@@ -1,9 +1,9 @@
 
 <?php 
-require_once("header.php");
-require('class/DAO.php');
-require_once 'class/mail.php';
-require 'class/vendor/autoload.php';
+require_once("../header.php");
+require('../class/DAO.php');
+require_once '../class/mail.php';
+require '../class/vendor/autoload.php';
 
 //pour installer email validator
 //composer require egulias/email-validator 
@@ -35,7 +35,7 @@ use Egulias\EmailValidator\Validation\RFCValidation;
     // calcule de la somme a regler
     $total = $commande['prix'] * $_REQUEST['quantite'];
     
-    echo '<div class="row justify-content-center">la livraison de votre commande est estimer a  '.$dateliv.' elle sera livrer au nom de '.$_REQUEST["nomprenom"].' a l\'adresse '.$_REQUEST["adresse"].'</div>
+    $_SESSION['texte']  = '<div class="row justify-content-center">la livraison de votre commande est estimer a  '.$dateliv.' elle sera livrer au nom de '.$_REQUEST["nomprenom"].' a l\'adresse '.$_REQUEST["adresse"].'</div>
             <div class="container g-0">
                 <div class="row justify-content-center">
                     <img id="cat" class="img-fluid" src="../img/cat_waiting.jpeg" alt="waiting">
@@ -55,7 +55,7 @@ use Egulias\EmailValidator\Validation\RFCValidation;
     envoiemail($_REQUEST['adresse'],$_REQUEST['email'],$_REQUEST['nomprenom'],$_REQUEST['quantite'],$total,$commande['libelle'],$dateliv);
     
     // Ouverture en écriture seule 
-    $fp = fopen("fichier_texte/"."commande.txt", "a"); 
+    $fp = fopen("../fichier_texte/"."commande.txt", "a"); 
     
     // Ecriture du contenu
     fputs($fp, $infoscommande); 
@@ -63,7 +63,6 @@ use Egulias\EmailValidator\Validation\RFCValidation;
     // Fermeture du fichier  
     fclose($fp);
 
-    
 
 
 ?>
@@ -72,14 +71,17 @@ use Egulias\EmailValidator\Validation\RFCValidation;
 
 <?php
 } else {
-    echo "<div class=\"container g-0\">
+    $_SESSION['texte']  = "<div class=\"container g-0\">
             <div class=\"row justify-content-center\">L'adresse e-mail n'est pas valide.</div>
             <div class=\"row justify-content-center\">
             <img id=\"cat\" class=\"img-fluid\" src=\"../img/erreur/redcross.jpg\" alt=\"waiting\">
             </div>
         </div>";
     }
-require_once("footer.php");
+
+    header("location:../commande_passer.php");
+
+require_once("../footer.php");
 
 ?>
 

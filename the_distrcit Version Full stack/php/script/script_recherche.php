@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'header.php' ;
-require_once 'class/DAO.php' ;
+require_once '../header.php' ;
+require_once '../class/DAO.php' ;
 
 //creation class requete
 $p = new requete();
@@ -48,9 +48,9 @@ $p->setConnection($servername,$dbname,$username,$password);
   }
   }
   
-  header('location:plat.php');
+  header('location:../plat.php');
 
-  require_once 'footer.php';
+  require_once '../footer.php';
 
 ?>
 

@@ -140,6 +140,19 @@
         
         }
 
+        button.btn {
+            background-color: #315F72;
+        }   button.btn:hover{
+            background-color: #315F72;
+        }
+
+        .btn{
+            filter:drop-shadow( 0 0 0.25rem black);
+            transition: all 0.25s;
+        } .btn:hover{
+            transform: scale(1.10);
+        }
+
     @media screen and (max-width: 926px) 
     {
     #navbot{

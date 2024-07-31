@@ -49,13 +49,13 @@ class requete
             //prepare la requete sql;
             $this->_select = $this->_conn->prepare($sql);
 
-            // Lier les paramètres pour chaque ID
+            //Lier les paramètres pour chaque ID
             foreach ($ids as $index => $id) {
                 // Remplacer les '?' par les valeurs du tableau $ids, en commençant par 1 (PDO est 1-based)
                 $this->_select->bindValue($index + 1, $id, PDO::PARAM_INT);
             }}
 
-        // Méthode pour sélectionner une ligne d'une table avec une condition sur l'ID
+        //Méthode pour sélectionner une ligne d'une table avec une condition sur l'ID
         public function setSelectone($table,$id){
             // Préparation de la requête en fonction de la table spécifiée
             if($table == 'plat'){
@@ -108,6 +108,15 @@ class requete
                 }
         }
 
+    public function setSelectcommandeclient($email){
+            $this->_select = $this->_conn->prepare("SELECT * FROM commande 
+                                                        LEFT JOIN plat on commande.id_plat = plat.id
+                                                            WHERE email_client = :email 
+                                                                ORDER BY date_commande DESC");
+
+            $this->_select->bindParam(':email' , $email);
+    }
+
 
     // Méthode pour exécuter la requête et récupérer les résultats
     public function getSelectall($allforone) {
@@ -146,32 +155,6 @@ class requete
         // Retourner les résultats de la requête
         return $this->_selectall;
 
-    }}
-
-//class enfant pour ajouter dans la table commande
-class Ajoutcommande extends requete
-{   
-    // Propriétés de la classe pour les détails de la commande
-    private $_id_plat;
-    private $_quantite;
-    private $_total;
-    private $_etat;
-    private $_nom_client;
-    private $_telephone_client;
-    private $_email_client;
-    private $_adresse_client;
-
-    // Constructeur pour initialiser les propriétés de la commande
-    public function __construct ($id_plat,$quantite,$total,$etat,$nom_client,$telephone_client,$email_client,$adresse_client) {
-
-        $this->_id_plat = $id_plat;
-        $this->_quantite = $quantite;
-        $this->_total = $total;
-        $this->_etat = $etat;
-        $this->_nom_client = $nom_client;
-        $this->_telephone_client = $telephone_client;
-        $this->_email_client = $email_client;
-        $this->_adresse_client = $adresse_client;
     }
 
     public function nettoyerChaine($string) {
@@ -211,6 +194,33 @@ class Ajoutcommande extends requete
         $string = str_replace($filtrecaracteresSpeciaux, ' ', $string);
         return $string;
         }
+}
+
+//class enfant pour ajouter dans la table commande
+class Ajoutcommande extends requete
+{   
+    // Propriétés de la classe pour les détails de la commande
+    private $_id_plat;
+    private $_quantite;
+    private $_total;
+    private $_etat;
+    private $_nom_client;
+    private $_telephone_client;
+    private $_email_client;
+    private $_adresse_client;
+
+    // Constructeur pour initialiser les propriétés de la commande
+    public function __construct ($id_plat,$quantite,$total,$etat,$nom_client,$telephone_client,$email_client,$adresse_client) {
+
+        $this->_id_plat = $id_plat;
+        $this->_quantite = $quantite;
+        $this->_total = $total;
+        $this->_etat = $etat;
+        $this->_nom_client = $nom_client;
+        $this->_telephone_client = $telephone_client;
+        $this->_email_client = $email_client;
+        $this->_adresse_client = $adresse_client;
+    }
 
     // Méthode pour ajouter une commande dans la base de données
     public function setAjout(){
@@ -220,14 +230,14 @@ class Ajoutcommande extends requete
                                          VALUES (:id_plat, :quantite, :total, NOW(), :etat, :nom_client, :telephone_client, :email_client, :adresse_client); ");
         
         // Lier les paramètres aux valeurs nettoyées
-        $stmt->bindParam(':id_plat', $this->nettoyerChaine($this->_id_plat));
-        $stmt->bindParam(':quantite', $this->nettoyerChaine($this->_quantite));
-        $stmt->bindParam(':total', $this->nettoyerChaine($this->_total));
-        $stmt->bindParam(':etat', $this->nettoyerChaine($this->_etat)); 
-        $stmt->bindParam(':nom_client', $this->nettoyerChaine($this->_nom_client)); 
-        $stmt->bindParam(':telephone_client', $this->nettoyerChaine($this->_telephone_client)); 
+        $stmt->bindParam(':id_plat', parent::nettoyerChaine($this->_id_plat));
+        $stmt->bindParam(':quantite', parent::nettoyerChaine($this->_quantite));
+        $stmt->bindParam(':total', parent::nettoyerChaine($this->_total));
+        $stmt->bindParam(':etat',parent::nettoyerChaine($this->_etat)); 
+        $stmt->bindParam(':nom_client', parent::nettoyerChaine($this->_nom_client)); 
+        $stmt->bindParam(':telephone_client', parent::nettoyerChaine($this->_telephone_client)); 
         $stmt->bindParam(':email_client', $this->_email_client);
-        $stmt->bindParam(':adresse_client', $this->nettoyerChaine($this->_adresse_client)); 
+        $stmt->bindParam(':adresse_client', parent::nettoyerChaine($this->_adresse_client)); 
 
         try {
                 
@@ -244,6 +254,144 @@ class Ajoutcommande extends requete
 
         };
     }
+}
+
+// Définir la classe Ajoututilisateur qui étend la classe requete
+class Ajoututilisateur extends requete{
+    // Propriétés de la classe pour les détails de l'utilisateur
+    private $_nom_prenom;
+    private $_email;
+    private $_password;
+    
+    // Constructeur pour initialiser les propriétés de la commande
+    public function __construct ($nom_prenom,$email,$password) {
+        
+        $this->_nom_prenom = $nom_prenom;
+        $this->_email = $email;
+        $this->_password = $password;
+    }
+
+    // Méthode pour ajouter un utilisateur à la base de données
+    public function setAjoutuser(){
+        $stmt = $this->_conn->prepare("SELECT * FROM utilisateur WHERE email = :email;");
+        $stmt -> bindParam(':email',$this->_email);
+        try {
+                
+            // Exécuter la requête d'insertion
+            $stmt->execute();
+            $checkexist = $stmt->fetch();
+            var_dump($checkexist);
+
+             // Fermer le curseur
+            $stmt->closeCursor();
+            
+        } catch (PDOException $e) {
+
+            // Afficher l'erreur en cas de problème d'exécution de la requête
+            echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
+            return false;
+        };
+        if($checkexist == false){
+            // Préparation de la requête d'insertion
+            $stmt = $this->_conn->prepare("INSERT INTO utilisateur (nom_prenom, email ,password) 
+                                                VALUES (:nom_prenom, :email, :password);");
+            
+            // Lier les paramètres aux valeurs nettoyées
+            $stmt->bindParam(':nom_prenom', parent::nettoyerChaine($this->_nom_prenom));
+            $stmt->bindParam(':email', $this->_email);
+            $stmt->bindParam(':password', $this->setHashage($this->_password)); 
+    
+            try {
+                    
+                // Exécuter la requête d'insertion
+                $stmt->execute();
+    
+                 // Fermer le curseur
+                $stmt->closeCursor();
+                
+            } catch (PDOException $e) {
+    
+                // Afficher l'erreur en cas de problème d'exécution de la requête
+                echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
+    
+            };
+    
+            return $this->_user;
+        }
+    }
+
+    // Méthode pour hacher le mot de passe
+    public function setHashage($password){
+        $passwordhashbrown = password_hash($password, PASSWORD_DEFAULT);
+        return $passwordhashbrown;
+    }
+}
+
+class verifyutilisateur extends requete{
+    // Propriétés de la classe pour les détails de l'utilisateur
+    private $_nom_prenom;
+    private $_email;
+    private $_password;
+    private $_passwordverify;
+    private $_user;
+
+    //Methode pdo pour recuperer les infos user
+    public function setUser($email){
+        $stmt = $this->_conn->prepare("SELECT * FROM utilisateur WHERE email = :email;");
+        $stmt -> bindParam(':email',$email);
+        
+        try {
+                
+            // Exécuter la requête d'insertion
+            $stmt->execute();
+            $this->_user = $stmt->fetch();
+
+             // Fermer le curseur
+            $stmt->closeCursor();
+            
+        } catch (PDOException $e) {
+
+            // Afficher l'erreur en cas de problème d'exécution de la requête
+            echo 'Erreur lors de l\'exécution de la requête : ' . $e->getMessage();
+
+        };
+    }
+
+    //Methode pour verifier si le mode passe entrer est correcte
+    public function setPasswordverify($password){
+        $this->_passwordverify = password_verify($password, $this->_user['password']);
+        return $this->_passwordverify;
+    }
+
+    //setting des proprieté
+    public function setNom_prenom(){
+        $this->_nom_prenom = $this->_user['nom_prenom'];
+        }
+
+    public function setEmail(){
+        $this->_email = $this->_user['email'];
+        }
+
+    public function setPassword(){
+        $this->_password = $this->_user['password'];
+        }
+
+    //get des proprieté
+    public function getNom_prenom(){
+        return $this->_nom_prenom;
+        }
+
+    public function getEmail(){
+        return $this->_email;
+        }
+
+    public function getPassword(){
+        return $this->_password;
+        }
+
+    public function getUser(){
+            return $this->_user;
+        }
 }
 
 //exemple pour creer un requete

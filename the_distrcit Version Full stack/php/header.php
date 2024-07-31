@@ -7,13 +7,6 @@ $username = "admin";
 $password = "Afpa1234";
 $dbname = "the_district";
 
-// try {
-//     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-//     // configurer le mode d'erreur PDO pour générer des exceptions
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// } catch(PDOException $e) {
-//     echo "Erreur de connexion à la base de données: " . $e->getMessage();
-// }
 ?>
 
 <html lang="fr">
@@ -44,12 +37,13 @@ $dbname = "the_district";
  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <a class="navbar-brand" href="#"><img src="../img/the_district_brand/logo_transparent.png" width="50" class="d-inline-block align-text-top" alt="navicon"></a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <div class='jutify-content-center'>
         <ul class="navbar-nav ">
                 <li class="nav-item px-5">
                     <a <?php if($_SERVER['REQUEST_URI'] == "/php/index.php")echo ' class="textnav nav-link active"';else echo ' class="textnav nav-link"'?> href="index.php" title="Accueil">Accueil</a>
@@ -65,6 +59,33 @@ $dbname = "the_district";
                 </li>
             </ul>
         </div>
+        <?php if(isset($_SESSION['user'])){ ?>
+        <div class='groupbutton d-block d-md-none justify-content-end me-3'>
+                <button class="btn btn-primary col-7  ms-1" type="button" value='commande' name='commande_ou_deconnexion' onclick='window.location.href="detail_commande.php"'><?= $_SESSION['user']['nom_prenom'] ?></button>
+                <button class="btn btn-primary col-7 mt-2 ms-1" type="button" value='inscription' name='commande_ou_deconnexion' onclick='window.location.href="script_deconnexion.php"'>deconnexion</button>
+        </div>
+             <?php } else { ?>
+        <form action="script/form_inscriptioneconnexion.php" method='POST'>
+            <div class='groupbutton d-block d-md-none row'>
+                    <button class="btn btn-primary col-7 " type="submit" value='connexion' name='inscription_et_connexion'>connexion</button>
+                    <button class="btn btn-primary col-7 mt-2" type="submit" value='inscription' name='inscription_et_connexion'>inscription</button>
+            </div>
+        </form>
+        <?php } ?>
+        </div>
+        <?php if(isset($_SESSION['user'])){ ?>
+        <div class='groupbutton d-none d-md-block justify-content-end me-3'>
+                <button class="btn btn-primary me-2" type="button" value='commande' name='commande_ou_deconnexion' onclick='window.location.href="detail_commande.php"'><?= $_SESSION['user']['nom_prenom'] ?></button>
+                <button class="btn btn-primary" type="button" value='inscription' name='commande_ou_deconnexion' onclick='window.location.href="script_deconnexion.php"'>deconnexion</button>
+        </div>
+             <?php } else { ?>
+        <form action="script/form_inscriptioneconnexion.php" method='POST'>
+        <div class='groupbutton d-none d-md-block justify-content-end me-3'>
+                <button class="btn btn-primary me-2" type="submit" value='connexion' name='inscription_et_connexion'>connexion</button>
+                <button class="btn btn-primary" type="submit" value='inscription' name='inscription_et_connexion'>inscription</button>
+        </div>
+        </form>
+        <?php } ?>
      </nav>
 
 <!--Navbar end-->
@@ -88,5 +109,6 @@ echo '<div id="parent">
 ?>
 
 <!--Banniere Top-->
+
 
 </header>

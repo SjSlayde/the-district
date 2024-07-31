@@ -17,7 +17,7 @@ require_once('header.php');
 ?>
 
     <!--Formulaire de Contact Start-->
-    <form action="script_contact.php" id="form">
+    <form action="script/script_contact.php" id="form">
         <div class="container mt-3">
             <div class="row mb-3">
                 <div class="col-6 mb-3">
